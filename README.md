@@ -30,7 +30,7 @@ four suit tarantula
 </a>
 <br>
 
-<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta03-tarantulaMedium.html">
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/tarantula medium beta.html">
 two suit tarantula (fixed problem with only two suits of hearts and six of spades)
 </a>
 <br>
