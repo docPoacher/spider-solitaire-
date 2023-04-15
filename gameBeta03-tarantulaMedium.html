@@ -245,7 +245,7 @@ function drawDeckBuild(suits){
         default:
         suit = dia;
         if(game.suits <= 3){
-        	suit = hrt;
+        	suit = spd;
         }
       }
       for(let value = 1; value <= 13; value ++){
@@ -296,7 +296,7 @@ function shuffle(array) {
 }
 
 shuffle(drawDeck);
-console.log(deep2(drawDeck));
+
 //layout backend
 function buildTableu(){
 	for(let i = 0; i <= 9;i++){
@@ -852,21 +852,7 @@ function foundationClick() {
   }
 
 // testing
-function deep2(obj){
-  let output = {};
-  function dive(objx){
-   let list = Object.keys(objx);
-    for(let key of list) {
-      let bart = objx[key];
-      if(!output[bart]) {output[bart] = 0}
-      output[bart]++;
-      if(typeof bart === 'object'){dive(bart)}
-    }
-  }
-  dive(obj);
-  return output;
-}
-	
+
 layoutGen();
 </script>
 </html>
