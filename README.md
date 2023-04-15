@@ -2,8 +2,40 @@
 <BR>
 spider solitair but lightweight and more fun
 <BR>
-to test any of the HTML just add:<BR>
+to test any HTML just add:<BR>
 https://htmlpreview.github.io/?
 <BR>
 before the address of the git I.E: <BR>
+
 https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta01mediumtext.html
+<br>
+or click on the links below:<Br>
+
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta01.html">
+easy regular beta
+</a><br>
+
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta01mediumtext.html">
+two suit regular beta
+</a>
+<br>
+
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta01hardtext.html">
+hard (four suit) regular beta
+</a>
+<br>
+
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta03-tarantula.html">
+four suit tarantula
+</a>
+<br>
+
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta03-tarantulaMedium.html">
+two suit tarantula (sometimes it deals)
+</a>
+<br>
+
+<a href="https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/gameBeta03-tarantulaeasy.html">
+easy tarantula
+</a>
+<br>
