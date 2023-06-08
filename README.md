@@ -1,4 +1,9 @@
 # spider-solitaire-
+
+06/07/2023
+New graphics, menu, includes 5 game modes (9legs designed by me) custom menu (wild card dont work do not use wild card)
+https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/scratch spider 2 beta.html
+
 <BR>
 spider solitair but lightweight and more fun
 <BR>
