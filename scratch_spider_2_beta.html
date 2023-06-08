@@ -1095,17 +1095,6 @@ function warpS(column) {
 
 var keys = [];
 
-document.addEventListener("keyup", function(e) {
-  keys[e.keyCode] = false;
-});
-
-document.addEventListener("keydown", function(e) {  
-  e.preventDefault(); // make sure this doesn't scroll the window
-  keys[e.keyCode] = true;
-  //console.log(e.keyCode);
-  buttonPress(e.keyCode);
-  }
- )
 
 ///////////////////////////////NEW GAME\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 function newGame(){
@@ -1126,6 +1115,17 @@ function newGame(){
   printLegs();
   layoutGen();
  
+document.addEventListener("keyup", function(e) {
+  keys[e.keyCode] = false;
+});
+
+document.addEventListener("keydown", function(e) {  
+  e.preventDefault(); // make sure this doesn't scroll the window
+  keys[e.keyCode] = true;
+  //console.log(e.keyCode);
+  buttonPress(e.keyCode);
+  }
+ )
 }
 
 
