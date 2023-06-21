@@ -1,0 +1,1297 @@
+<html>
+
+<head>
+<style>
+
+
+
+table {
+  background-image: repeating-linear-gradient(15deg, rgba(255,255,255, .1), rgba(255,255,255) 1px, transparent 1px, transparent 1px);
+  background-color:#E3F8F2;
+  margin:auto;
+  width: 500px;
+  border-radius:10px;
+}
+tr {
+
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  }
+
+
+.paddedCell{
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:10px;
+  text-align: center;
+  }
+.menu{
+  padding:10px;
+  
+}
+.menuBalloon{
+  background-image: repeating-linear-gradient(90deg, rgba(255,255,255, .1), rgba(255,255,255,.5) 1px, transparent 1px, transparent 1px);
+  background-color:#AAECD9;
+  border-radius:15px;
+  padding-left:15px;
+  padding-top:3px;
+  padding-bottom:3px;
+}
+.numInp{
+  background-image: repeating-linear-gradient(15deg, rgba(255,255,255, .4), rgba(255,255,255) 3px, transparent 1px, transparent 1px);
+  background-color:#DBE6E3;
+  width:40px;
+  border-radius:5px;
+  padding:4px;
+}
+
+.customSubmitButton{
+  
+  padding:4px;
+  background-image: repeating-linear-gradient(15deg, rgba(255,255,255, .4), rgba(255,255,255) 3px, transparent 1px, transparent 1px);
+  background-color:#DBE6E3: ;
+//  background-color:#AAECD9;
+  border:3px solid;
+  border-top: 2px solid black;
+  border-right: 2px solid gray;
+  border-bottom: 3px solid gray;
+  border-left: 2px solid black;
+  border-radius:5px;
+}
+
+.customSubmitButton:active {
+  background-color: #AAECD9;
+  border-top: 3px solid black;
+  border-bottom: 2px solid gray;
+  border-right: 3px solid gray;
+  border-left: 1px solid black;
+  
+  transform: translateY(1px);
+}
+
+.menuCheckbox{
+  //border-radius:50%;
+}
+
+
+body{
+  cursor:default;
+  background-color:#78B14E;
+  font-family:"Georgia","Tinos";
+  letter-spacing:-1px;
+  font-size:1.1em;
+}
+.mainTable, th, td {
+  //border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing:0px;
+}
+td {
+  margin-left:auto;
+  margin-right:auto;
+  margin:0 auto;
+  vertical-align: top;
+  text-align:center;
+  
+  width:40px;
+}
+
+
+.spacer1{
+  height:10px;
+ 
+}
+
+.emptyStock {
+  width: 20px;
+  height:30px;  
+  border:0px;
+ background-image: repeating-linear-gradient(15deg, rgba(255,255,255, .1), rgba(255,255,255) 1px, transparent 1px, transparent 1px);
+  background-color:#E3F8F2;
+  margin:auto;
+}
+.faceDownCard { 
+  
+  position: relative;
+  border-radius: 2px;
+  word-wrap: break-word;
+  //background-color:#EF896B;
+  background-image: repeating-linear-gradient(-40deg, rgba(255,255,255, 0.25), rgba(50,50,50) 2px, transparent 1px, transparent 10px);
+  background-size: 2px 4px;
+  box-shadow: 0 0 0 1px #ffffff,inset 0 0 0 1px #fff;
+  width: 20px;
+  height:30px;  
+  background-color:#EF896B;
+  padding: 1px 1px;
+  border-top:    1px solid  #DF481C;
+  border-right:  1px solid #DF481C;
+  border-bottom: 1px solid #DF481C;
+  border-left:   1px solid  #DF481C;
+  color: #000;
+  color: rgba(0, 0, 0, 0.1);
+}
+.face1 {
+  font-family:inherit;
+  font-size:1.2em;
+  border:0px solid;
+  padding:1px 0px;
+  padding-right: 1px;
+  width: 35px;
+  line-height: 73%;
+}
+.topcard1 { 
+  position: relative;
+  border-radius: 2px;
+  word-wrap: break-word;
+  //background-color:#EF896B;
+  background-color:#ffffff;
+  background-image: repeating-linear-gradient(-90deg, rgba(255,255,255, .90), rgba(50,50,50,.10) 2px, transparent 1px, transparent 10px);
+  background-size: 2px 4px;
+  box-shadow: 0 0 0 1px #ffffff,inset 0 0 0 1px #fff;
+  width: 25px;
+  height:43px;  
+  //background-color:#EF896B;
+  padding: 1px 2px;
+  padding-top:2px;
+  border-top:    1px solid  #DF481C;
+  border-right:  1px solid #DF481C;
+  border-bottom: 1px solid #DF481C;
+  border-left:   1px solid  #DF481C;
+  color: #000;
+  color: rgba(0, 0, 0);
+  line-height:79%;
+  display: inline-block;
+}
+
+.notTop{
+  position: relative;
+  background-color:#ffffff;
+  background-image: repeating-linear-gradient(-90deg, rgba(255,255,255, .90), rgba(50,50,50,.10) 2px, transparent 1px, transparent 10px);
+  background-size: 2px 4px;
+  box-shadow: 0 0 0 1px #ffffff,inset 0 0 0 1px #fff;
+  width: 27px;
+  height:13px;
+ // box-shadow: 0 0 0 1px #716F6E,inset 0 0 0 1px #fff;
+  //background-color:#ECF2E7;
+  border-radius: 2px 2px 0px 0px;
+  border: 1px solid gray;
+  border-bottom: 0px solid;
+  
+  padding: 0px 1px;
+  padding-top: 4px;
+  display: inline-block;
+}
+.downArrow{
+  position: relative;
+ // background-color:#ffffff;
+ // background-image: repeating-linear-gradient(-90deg, rgba(255,255,255, .90), rgba(50,50,50,.10) 2px, transparent 1px, transparent 10px);
+ // background-size: 2px 4px;
+ // box-shadow: 0 0 0 1px #ffffff,inset 0 0 0 1px #fff;
+  width: 28px;
+  height:13px;
+ // box-shadow: 0 0 0 1px #716F6E,inset 0 0 0 1px #fff;
+  //background-color:#ECF2E7;
+  border-radius: 2px 2px 0px 0px;
+  border: 0px solid gray;
+  border-bottom: 0px solid;
+  
+  padding: 0px 1px;
+  padding-top: 4px;
+  display: inline-block;
+}
+.foundationPush{
+  
+}
+.invis {
+  //background-color: #78B14E;
+  background-color:#AAECD9;
+  border: 1px solid;
+}
+
+
+svg {
+  position:absolute;
+  display:inline-block;
+  fill-opacity:0;
+  width: auto;
+  height:auto;
+}
+.theCircle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash .3s linear forwards 1;
+  //animation-iteration-count: 1;
+  z-index:1;
+}
+.theCircleOff {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 985;
+  animation: dashOff .3s linear forwards 1;
+  z-index:1;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset:10;
+  }
+}
+@keyframes dashOff {
+  from {
+    stroke-dashoffset:10;
+  }
+  to {
+    stroke-dashoffset:1000;
+    opacity:0;
+  }
+}
+
+</style>
+</head>
+<meta charset="UTF-8">
+<header Content-Type: text/html; charset='utf-8'>
+<body>
+<div id="banana"></div>
+<div id="yo"></div>
+<br>
+<span id='yi'></span>
+
+<br>
+
+
+<!--<div id='difficultySelector'></div>-->
+
+<svg>
+<symbol id="squircle1" >
+<path fill="white" stroke="royalblue" stroke-width="4" d="M36,26.482c72-34.667,127.667-1.333,132.333,31.333	c6.895,48.277-48.122,96.228-92.667,84c-35.378-9.711-73-48-66.333-82.667c5.148-26.771,34.181-56.445,89-57.333 C148.666,1,187.25,57.732,173.75,85.732c-9.334,28-55.749,71.917-102.5,62.5c-42.5-11.5-73.769-65.847-69.583-93.75 c2-13.333,10.667-43.333,54-53.482"/>
+</symbol>
+</svg>
+</body>
+
+<script>
+/*
+//options menu
+var menu = {suits:4,legs:10,kOnA:false,relaxed:true};
+//relaxed means dealing is allowed to empty leg
+var gameVersions = {classic:true, nineLegs:false, spiderette:false,willowisp:false,custom:false};
+//Will o' the Wisp by Geoffrey Mott-Smith is played with 21 cards delt to seven legs of three with only the top card of each column face-up
+var gameDifficulty = {easy:false,medium:true,hard:false};
+*/
+var theUpdate='06/21/2023 Custom menu: wild card works. Randomize increases difficulty chance each click by design. (i.e. one click is easy random, two clicks is harder and so on) Suit number counter hidden to prevent game breaking also it was pointless(haha get it no pointer haha) now I will test it by playing a bazillion games.  New modes in development.\n06/20/2023 Custom menu: wildcard still broken.  Randomize breaks the game.  Suit number has to match highlighted pip or game will break.  \nEverything else works probably' ;
+var updates = '<table><tr><td>' + theUpdate + '</td></tr><tr><td><button class="customSubmitButton" onclick="mainMenu()">Go Back</button></td></tr></table>';
+
+
+var game = {version:'Classic',difficulty:'medium',decks:2,suits:4,kOnA:true,relaxed:true,legs:10,wildCard:false,noFaceCards:false,custom:false,dealFaceDown:44};
+//var drawDeck = []
+
+var suitPipsStart = ['&#9824','<span style="color:#DF481C;">&#9829</span>','&#9827','<span style="color:#DF481C;">&#9830</span>','<span style="color:#FFB10B;font-size:.7em;">&#9728</span>','<span style="color:#0EE77A;font-size:.8em;">&#9752</span>','<span style="color:#015CF3;">&#9829</span>','<span style="color:pink">&#10049</span>','&#9826']
+var suitPips = ['&#9824','<span style="color:#DF481C;">&#9829</span>','&#9827','<span style="color:#DF481C;">&#9830</span>','<span style="color:#FFB10B;font-size:.7em;">&#9728</span>','<span style="color:#0EE77A;font-size:.8em;">&#9752</span>','<span style="color:#015CF3;">&#9829</span>','<span style="color:pink">&#10049</span>','&#9826']
+var suitPipSelection = ['&#9824','<span style="color:#DF481C;">&#9829</span>','&#9827','<span style="color:#DF481C;">&#9830</span>','<span style="color:#FFB10B;font-size:.7em;">&#9728</span>','<span style="color:#0EE77A;font-size:.8em;">&#9752</span>','<span style="color:#015CF3;">&#9829</span>','<span style="color:pink">&#10049</span>','&#9826']
+
+var highCard = 13;
+
+var menuModeArr =['Classic','Spiderette','9Legs','Tarantula','Will o Wisp','Custom','What is new?'];
+var menuDifficultyArr = ['easy','medium','hard'];
+var menuCustomizeNum = ['decks','suits','legs'];
+
+
+function vv23() {
+  let output = radioSelection(document.getElementById('vv22').value);
+  document.getElementById('vv26').innerHTML = output;
+}
+
+const numberSelection = (x) =>{
+  let output = ['<input class="numInp" type="number" id="','" name="' + x[0] + '" value="' + x[2] + '"' + x[3] +'><label for="' + x[2] + '">' + x[1] + '</label>'];
+  return output.join(x[0]);
+  }
+
+const checkboxSelection = (x) =>{
+  let output = ['<td><input class="menuCheckbox" type="checkbox" id="' + x[0] + '" name="' + x[0] + '" ' + x[3] + '><label for="' + x[0] + '">','</label>']
+  return output.join(x[1]);
+  }
+
+function radioSelection (key,value){
+  let output = ['<input type="radio" onclick="menuUsr(\'' + key + '\',\'','\')" id="','" name="' + key + '" value="','"><label for="','">','</label>']
+  return output.join(value);
+}
+
+const buttonSelection = (key,value,opr) =>{
+  if(!opr){opr = '';}
+  let output = ['<button class="customSubmitButton" onclick="menuUsr(\'' + key + '\',\'','\'),'  + opr + '" id="','" name="' + key + '" value="','">','</button>']
+  return output.join(value);
+}
+
+function menuUsr(type,value){
+  game[type] = value;
+}
+  
+function mainMenu(){
+  suitPips = [...suitPipsStart];
+  game = {version:'Classic',difficulty:'hard',decks:2,suits:4,kOnA:false,relaxed:false,legs:10,wildCard:false,noFaceCards:false}
+  document.getElementById('banana').innerHTML = '<table width="80%" class="tableMain" ><tr><td>' + genForm('Pick a game!','version',menuModeArr,buttonSelection,'menuSelection()',3) + '</td></tr></table><p id= "banana2"></p>';
+}
+
+function genForm(message,type,array,opr,opr2,column,row){
+  let output = '<table class="menu"><tr><td>';
+  output += '<form><div class="menuBalloon">' + message + '</div></td></tr><tr><td><table class="menuBalloon"><tr><td class="paddedCell">';
+  let tableEnd = '</td></tr></table>';
+  let colStart = '';
+  let colEnd = '<br>';
+  if(column){
+  colStart='<tr><td class="paddedCell">';
+  colEnd = '</td><td class="paddedCell">';
+  } else {column = 1}
+  let rows = Math.ceil(array.length/column);
+  for(let i = 0;i <= array.length ;i+=rows){
+    output += array.slice(i,i+rows).map(x => opr(type,x,opr2)).join('<br><br>');
+  	output += colEnd;  
+  };
+  //output += array.slice(0,half).map(x => operation('type',x)).join('<br>');
+//  output += colEnd;
+//  output += array.slice(half).map(x => operation('type',x)).join('<br>');
+  //output += array.map(x => operation('type',x)).join('')
+  output += tableEnd + '</form>';
+  output += tableEnd;
+  console.log(output)
+  return output;
+}
+
+//////////////////////customize menu
+//['suits',' suits (max 8)',game.suits,'min="1" max="8"'],
+var menuCustomizeObjNum=[['decks',' decks (max 99) ',game.decks,'min="1" max="99"'],['legs',' legs (max 20)',game.legs,'min="3" max="20"']];
+var menuCustomizeObjChk=[['kOnA','King on Ace Stacking',game.kOnA],['relaxed','Deal to Empty Leg?',game.relaxed,'checked'],['wildCard','Wild Card',game.wildCard],['noFaceCards','A-10 Only?',game.noFaceCards]];
+
+
+
+//var suitPipSelector = [['spade',suitPips[0],'','checked'],['heart',suitPips[1],'','checked']]
+/////////////////////suit selector\\\\\\\\\\\\\\\\\\\\
+var squircles1= '<use class="theCircle" xlink:href="#squircle1"/>';
+var squircles1off= '<use class="theCircleOff" xlink:href="#squircle1"/>';
+var suitPickStr = [false, false, false, false, false, false, false, false, false];
+var suitPick = [];
+
+var suitPips2 = ['&#9824', '<span style="color:#DF481C;">&#9829</span>', '&#9827', '<span style="color:#DF481C;">&#9830</span>', '<span style="color:#FFB10B;font-size:.7em;">&#9728</span>', '<span style="color:#0EE77A;font-size:.8em;">&#9752</span>', '<span style="color:#015CF3;">&#9829</span>', '<span style="color:#FFC5E1;font-size:.8em;">&#10049</span>', '<span style="font-size:.8em;">&#9826</span>']
+
+
+function suitPipSelector() { 
+  suitPick = [...suitPickStr]
+  let output = [];
+  for(i in suitPips){
+  output.push('<td style="text-align:left" onclick="pipOption(' + i + ')"><div><svg id="pipSquircle' + i + '" style="z-index:0; padding-top:8;padding-left:2;" viewBox="0 0 180 150" height="1.6em"><use class="theCircleOff" xlink:href="#squircle1"/></svg></div><div style="z-index:1;font-size:2em;"/> &nbsp;' + suitPips2[i] + '</div></td>');
+  }
+  return output.join('');
+}
+
+function pipOption(x){
+    suitPick[x] ? suitPick[x] = false : suitPick[x] = true;
+  if (suitPick[x]) {
+    document.getElementById('pipSquircle' + x).innerHTML = squircles1;
+  } else {
+    document.getElementById('pipSquircle' + x).innerHTML = squircles1off;
+  console.log('hey');
+  }
+  suitCustomCounter();
+}
+
+function suitCustomCounter(){
+  let output=0;
+  for(let x of suitPick){
+    if(x){output++}  
+  }
+  game.legs = output;
+  document.getElementById('suits').setAttribute('value',output)
+}
+
+var finalSuits= []
+function specialSuitPick(){
+  finalSuits =[];
+  for(let i in suitPick){
+    if(suitPick[i]){finalSuits.push(suitPips[i])}
+    console.log(i)
+  }
+  suitPips = [...finalSuits];
+}
+
+///////////////////////\\\\\\\\\\\\\
+
+function genCustomizeMenu(){
+  suitPick = [...suitPickStr];
+  let num = [...menuCustomizeObjNum];
+  let chk = [...menuCustomizeObjChk];
+  let output = '<table class="menu"><tr><td>';
+  output += '<form><div class="menuBalloon">Customize!</div></td></tr><tr><td><table class="menuBalloon" style="padding-left:0px"><tr><td><table class="menuBalloon">';
+	let tableEnd = '</td></tr></table>';
+  let colStart='<td>';
+  let colEnd = '</td><td>';
+    //output += num.map(x => numberSelection(x)).join(colEnd);
+    output += num.map(x => numberSelection(x)).join('</td>');
+    output += '</td></tr><table class="menuBalloon" width="100%"><tr>';
+    output += chk.slice(0,2).map(x => checkboxSelection(x)).join('</td>');
+    output += '</tr><tr>';
+    output += chk.slice(2).map(x => checkboxSelection(x)).join('</td>');
+    output += '</tr></table></tr><tr><td><table><tr>'
+    output += suitPipSelector();
+    output += '</tr></table></tr><tr><td><table><td><button class="customSubmitButton" onclick="mainMenu()">Go Back</button></td><td><button id="randomizeBut" class="customSubmitButton" onclick="randomize()">Randomize</button></td><td><button class="customSubmitButton" onclick="menuCustomSubmit()">Start Game</button><input type="hidden" value="4" id="suits" name="suits" value="4"></td></table></tr>';
+  output += '</table></form>';
+  output += tableEnd;
+  console.log(output)
+  return output;
+}
+var randomi = 1;
+function randomize(){
+  document.getElementById('decks').value = Math.floor(Math.random() * 5)+ randomi;
+//  document.getElementById('suits').value = Math.floor(Math.random() * 6)+ randomi;
+  document.getElementById('legs').value = Math.floor(Math.random() * 6) + 6 + randomi;
+  randomi++;
+  for(let i = 0;i <= 8; i++){
+    if(Math.floor(Math.random() * 2) == 1){
+    pipOption(i);
+    }
+  }
+  for(let i of ['kOnA','relaxed','wildCard','noFaceCards']){
+    if(Math.floor(Math.random() * 2) == 1){
+  document.getElementById(i).checked = true
+  	} else {document.getElementById(i).checked = false}
+  }
+}
+
+function menuCustomSubmit(){
+  specialSuitPick();
+  game.difficulty = 'Custom';
+  game.version = 'Custom';
+  for(let i of ['decks','suits','legs']){
+  	game[i] = parseInt(document.getElementById(i).value)
+  }
+  for(let i of ['kOnA','relaxed','wildCard','noFaceCards']){
+  	game[i] = document.getElementById(i).checked
+  }
+  startGame();
+}
+
+
+
+///////////////////////////////////
+
+
+function menuSelection(){
+  console.log('hey');
+  if(game.version == 'What is new?'){
+  document.getElementById('banana').innerHTML = updates
+  }else if(game.version == 'Custom'){
+  console.log('hello?');
+  document.getElementById('banana').innerHTML = '<table width="80%"><tr><td>' + genCustomizeMenu() + '</td></td></table><br><p id="boarnana2"></p>';
+    for(let i = 0;i <= 3; i++){
+ pipOption(i);
+		}
+  }else{
+  document.getElementById('banana').innerHTML = '<table width="80%"><tr><td>' + genForm('How hard?','difficulty',menuDifficultyArr,buttonSelection,'startGame()',3) + '</td></td></table><p id="boarnana"></p>';
+  }
+  
+}
+
+function startGame(){
+  if(game.noFaceCards){highCard = 10};
+  if(game.version == 'Tarantula'){
+    game.kOnA = true;
+  }
+  
+  if(game.version == 'Spiderette'){
+ 		game.decks = 1;
+ 		game.suits = 4;
+  	game.legs = 7;
+  } 
+  if(game.version == 'Will o Wisp'){
+    game.decks = 1;
+    game.suits = 4;
+    game.legs = 7;
+  }
+  if(game.difficulty == 'easy'){
+      game.decks = 8;
+      game.suits = 1;
+  }
+  if(game.difficulty == 'medium'){
+      game.decks = 4;
+      game.suits = 2;
+  }
+  if(game.difficulty == 'hard'){
+    	game.relaxed = false;
+  }
+  if(game.version == 'Spiderette' || game.version == 'Will o Wisp'){
+ 		game.decks = 1;
+ 		game.suits = 4;
+  	game.legs = 7;
+    if(game.difficulty == 'easy'){
+      game.decks = 4;
+      game.suits = 1;
+    }
+    if(game.difficulty == 'medium'){
+      game.decks = 2;
+      game.suits = 2;
+    }
+  }
+  if(game.version == '9Legs'){
+    game.kOnA = true;
+    game.decks = 3;
+    game.suits = 3;
+    game.legs = 9;
+    if(game.difficulty == 'easy'){
+      game.decks = 6;
+      game.suits = 1;
+    }
+    if(game.difficulty == 'medium'){
+      game.decks = 4;
+      game.suits = 2;
+    }
+      
+  }
+  
+   
+  
+	console.log(game);
+ console.log('game on')
+  newGame();
+}
+function newGameDeal(){
+  if(game.version == 'Classic' || game.version == 'Tarantula'){
+  	deal(44);
+  	deal(10,true);
+  }
+  if(game.version == 'Will o Wisp'){
+  deal(14);
+  deal(7, true);
+  }
+  if(game.version == 'Spiderette'){
+  	for(let i = 6; i >= 0 ; i--){
+  		deal(i);
+    }
+    deal(7,true);
+  }
+  if(game.version == 'Custom'){
+  deal(game.legs * 4);
+  deal(game.legs, true);
+  }
+  if(game.version == '9Legs'){
+    if(game.difficulty == 'hard'){deal(game.legs * 9, true)}
+    if(game.difficulty == 'easy'){deal(game.legs * 4, true)}
+    if(game.difficulty == 'medium'){deal(game.legs * 6,true)}
+  }
+}
+
+//var game = {version:'Classic',difficulty:'medium',decks:4,suits:2,kOnA:true,relaxed:true,legs:10,wildCard:false,noFaceCards:false};
+
+mainMenu();
+
+
+
+
+//document.getElementById('vv26').innerHTML = genMenu('Pick a game!',menuModeArr);
+//document.getElementById('difficultySelector').innerHTML = genMenu('How hard?',menuDifficultyArr);
+
+//document.getElementById('difficultySelector').innerHTML = '<table width=80%><tr><td>' + genForm('Pick a game!','version',menuModeArr,radioSelection) + '</td></tr></table>';
+
+
+//document.getElementById('difficultySelector').innerHTML = '<table width="80%"><tr><td>' + genForm('Pick a game!','version',menuModeArr,radioSelection,2) + '</td></tr></table><p id= "banana"></p>';
+
+
+
+
+//document.getElementById('banana').innerHTML = '<table width="80%"><tr><td>' + genForm('How hard?','difficulty',menuDifficultyArr,radioSelection,3) + '</td></td></table><p id="boarnana"></p>';
+
+
+
+
+//document.getElementById('boarnana').innerHTML = '<table width="80%"><tr><td>' + genForm('Customize!','decks',menuCustomizeNum,numberSelection,2) + '</td></td></table><p id="boarnana2"></p>';
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////// POPUP MENU CLASS
+
+class menuOption {
+  constructor(value,name,type) {
+    this.value = value;
+    this.type = type;
+    this.name = name;
+  }
+}
+
+/*
+function genMenu(message,arr) {
+  let output = '<form><p>' + message + '</p>';
+  output += arr.map(x => radioSelection('version',x)).join('');
+//  arr =  //
+  output += '</form>';
+  return output;
+}
+*/
+
+
+
+
+
+////////////////////////////////assets\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+function deep2(obj){
+  let output = {};
+  function dive(objx){
+    let list = Object.keys(objx);
+    for(let key of list) {
+      let bart = objx[key];
+      if(!output[bart]) {output[bart] = 0}
+      output[bart]++;
+      if(typeof bart === 'object'){dive(bart)}
+    }
+  }
+  dive(obj);
+  return output;
+}
+
+class cardCreate {
+  constructor(value,suit) {
+    this.value = value;
+    this.suit = suit;
+    this.vis = false;
+  }
+}
+//&#9752 clover, &#9733 solid star, &#9734 white star, &#9826 white diamond, &#9835 music, &#9790 moon,&#10051 pinwheel,
+//<span style="color:#015CF3;"> blue, <span style="color:#DF481C;"> red, <span style="color:#FFB10B;"> orange, 0EE77A green
+
+
+var suitnames = ['spd','hrt','clb','dia','eth']
+
+var cardValues = ['1','2','3','4','5','6','7','8','9','10','11','12','13','0']
+var placeHolder = 'bot';
+var cardBack = '&#9617';
+var emptyCellf = {value:0,suit:'&#8224',vis:true};
+var emptyCell = '&#8224';
+var stock = '░';
+var faceDown = '<span class="faceDownCard" style="z-index:1">.... ..</span>';
+var tableu = [];
+var ctableu = [];
+var foundation = [];
+//var downArrow = '<span class="downArrow">&#711;</span>';
+var downArrow = '<span class="downArrow">&#9660</span>';
+//var cursor = {p:0,s:0,mode:'listless'}
+const cursorStart = {leg:0, depth:0};
+var scursor = {...cursorStart};
+var pcursor = {leg: 0, depth:0};
+var cursor = {search:0,searchDepth:0,stack:0,foundation:0};
+var cursorMode = 'listless';
+
+const suitBuild = (suit) => {
+  let cards = [];
+  cards = cardValues.slice(0,highCard)
+/*  if(!game.noFaceCards){
+  	cards = cardValues.slice(0,highCard)
+  } else {
+    cards = cardValues.slice(0,highCard)
+  }
+*/
+  //if(game.wildCard){cards.push('Z')}
+  this['setReq'] = [...cards];
+  for(let pip of suitPips){
+    this['suitOf' + pip] = [];
+      for(let card of cards){
+        this['suitOf' + pip].push(new cardCreate(card,pip))
+      }
+    }    
+}
+  
+var testing1 = ''
+const deckBuild = () => {
+  suitBuild();
+  this['drawDeck'] = [];
+  for(let deck = 0;deck <= game.decks - 1; deck++){
+    for(let suit = 0;suit <= game.suits - 1;suit++){
+      if(game.version == '9Legs' && suit == 2){suit = 4};
+      for(let card of this['suitOf' + suitPips[suit]]){
+        let line = {}
+        line['suit'] = card.suit;
+        line['value'] = card.value;
+        line['vis'] = false
+        drawDeck.push(line);
+      }
+    }
+  } 
+  ////////////////////////
+//testing1 = deep2(drawDeck);
+  if(game.wildCard){drawDeck.push({suit: "&#9827", value: "Z", vis:false})}
+}
+
+
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+	}
+  return array;
+}
+////////////////////////////////Layout\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+function buildLayout(){
+  tableu = [];
+  foundation = [];
+  this['legs'] = game.legs;
+  this['sets'] = game.decks * game.suits;
+  //setReq is cards required for set. It is assigned in the suitBuild function
+  for(let i = 0;i <= legs-1;i++){
+    this['leg' + i] = [placeHolder];
+    tableu.push(this['leg' + i]);
+  }
+  for(let i = 0;i <= sets-1; i++){
+    this['found' + i] = emptyCell;
+    foundation.push(this['found' + i]);
+  }
+}
+
+/////////////////////////////////////do we need this?
+function tableuRefresh(){
+  tableu=[];
+  for(let i = 0;i <= legs-1;i++){
+    tableu.push(this['leg' + i]);
+  }
+}
+
+/////////////////////////////////deal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+function dealToLeg(leg,face) {
+   let topCard = drawDeck.pop();
+   topCard.vis = face
+   tableu[leg].push(topCard);
+}
+
+
+
+const deal = (numberOfCards, face) => {
+  for(let i of tableu){
+    if (i.length <= 0){return}
+  }
+  if(drawDeck.length == 0){return}
+  for(let i = 0; i < numberOfCards; i++){
+    if(drawDeck.length == 0){return}
+    dealToLeg(i % game.legs,face)
+  }
+}
+
+const newDeal = (numberOfCards, face) => {
+  if(drawDeck.length == 0){return}
+  for(let i = 0; i < numberOfCards; i++){
+    if(drawDeck.length == 0){return}
+    dealToLeg(i % game.legs,face)
+  }
+}
+
+
+const cellDiv = (data,id,message) =>{
+  let cell = '<td><div';
+  if(id){
+    cell += ' id="' + id + '"';
+  }
+  cell += message + '>' + data + '</div></td>';
+  return cell;
+}
+
+function visualFoundationBuild() {
+  for(let i in foundation){
+    this['found' + i] = foundation[i];
+    document.getElementById('found' + i).innerHTML = this['found' + i];
+  }
+}
+
+
+function visualTableBuild() {
+  let output = '<table class="mainTable"><tr><td id="stock"><button class=faceDownCard onclick="buttonPress(13)">....</button></td><td><div id="stockNo"></div></td>'
+  for(let i in foundation){
+    output += cellDiv(emptyCell,`found` + i);
+  }
+  output += '</tr><tr><td class="spacer1"><div class="spacer1"></div></td></tr><tr>';
+  for(let i in tableu){
+    output += cellDiv(emptyCell,`cleg` + i);
+    this['cleg' + i] = 'bot';
+    ctableu.push(this['cleg' + i]);
+  }
+  output += '</tr></table>';
+  document.getElementById('yo').innerHTML = output;
+}	
+/*
+      for(let value = 1; value <= 13; value ++){
+        this['card' + value + suit + deck] = new card(value,suit)
+        drawDeck.push(this['card' + value + suit + deck]);
+      }
+*/
+
+
+
+function beginGame(){
+  
+}
+
+function tableuGen(){
+   for(let i in tableu){
+   let line = this['cleg' + i];
+   //console.log(line);
+   document.getElementById(ctableu[i]).innerHTML = 'yo';
+   }
+   
+}
+
+function showCursor (){
+  let legNum = cursor.search;
+  let output = [...this['cleg' + cursor.search]];
+  let cardpos = output.length - cursor.searchDepth - 1
+  //console.log(tableu[pcursor.leg][cardpos - 1]);
+  output.splice(cardpos, 0,downArrow);
+  //console.log(output);  
+  document.getElementById('cleg' + legNum).innerHTML = '<div style="line-height:50%;">' + output.join('<br>') + '</div>';
+}
+
+function checkTopFace(){
+  for(let i = 0;i <= game.legs - 1;i++){
+    if(!tableu[i][tableu[i].length - 1].vis){tableu[i][tableu[i].length - 1].vis = "true"}
+  }
+}
+
+////////////////////////////////////Layout\\\\\\\\\\\\\\\\\\\\\\\\
+function layoutGen(){
+  visualFoundationBuild()
+  checkTopFace();
+  if(drawDeck.length <= 0){document.getElementById('stock').innerHTML = '<button class="emptyStock">' + emptyCell + '</button>'}
+  document.getElementById('stockNo').innerHTML = drawDeck.length;
+  
+  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'}
+  if(cursorMode != "stack"){this ['found' + foundation.indexOf(emptyCell)] = emptyCell}
+  
+  foundRefresh();
+  
+  
+  
+  ///////////////////////legs/////////////////////////
+
+
+
+  //document.getElementById('
+  //document.getElementById('
+  printLegs();
+  if(cursorMode != 'listless'){showCursor()};
+  ////////////////////Winning\\\\\\\\\\\\\\\\\\\\\\\\\\
+  if(foundation.indexOf(emptyCell) == -1){
+  document.getElementById('yi').innerHTML = '<table><tr><td>wow great game you did it</td></td></tr?<tr><td><button class="customSubmitButton" onclick="startOver()">Go Back</button></td></tr></table>';
+  console.log('win')
+  
+  }
+}
+
+const legDisplay= (leg,legNum) => {
+  cardposition = 1;
+  let length = leg.length;
+  let output = leg.map(x => seaCards(x,legNum,length));
+  this['cleg' + legNum] = output;
+  return this['cleg' + legNum].join('<br>');
+  //return output.join('<br>');
+}
+
+const topCard = (card,legNum) => {
+  let extra = 'onClick="clickOn(' + cardposition + ',' + legNum + ')"';
+  if(card.value == 10){return '<div class="topcard1" ' + extra + ' style="z-index:' + cardposition + '">' + card.value + '&nbsp;&nbsp;<br>' + card.suit + '<br>&nbsp;&nbsp;' + card.value + '</div>';}
+  if(card.value =='Z'){return '<div class="topcard1" ' + extra + ' style="z-index:' + cardposition + '">' + ' ' + '&nbsp;&nbsp;<br>' + ' ' + '<br>&nbsp;&nbsp;' + ' ' + '</div>';}
+  return '<div class="topcard1" onClick="clickOn(' + cardposition + ',' + legNum + ')" style="z-index:' + cardposition + '">' + cardDisplayValues[card.value] + '&nbsp;&nbsp;&nbsp;<br>' + card.suit + '<br>&nbsp;&nbsp;' + cardDisplayValues[card.value] + '</div>';
+  
+}
+
+const notTop = (card,legNum) => {
+  let extra = 'onClick="clickOn(' + cardposition + ',' + legNum + ')"';
+  if(card.value == 10){return '<div class="notTop"' + extra + ' style="z-index:' + cardposition + '">' + card.value + "" + card.suit + '</div>'}
+  if(card.value == 'Z'){return '<div class="notTop"' + extra + ' style="z-index:' + cardposition + '">' + '' + "" + '' + '</div>'}
+  return '<div class="notTop"' + extra + ' style="z-index:' + cardposition + '">' + cardDisplayValues[card.value] + "&nbsp;" + card.suit + '</div>'
+}
+
+var cardDisplayValues = ['JK','A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+
+const seaCards = (card,legNum,length) => {
+  if(card == 'bot' && length == 1){return '<button onclick="clickOn(0,' + legNum +')" class="invis">&#8224</button>'
+  }else if(card == 'bot'){return ''}
+  
+  cardposition++;
+  if(!card.vis){return faceDown}
+  if(cardposition == length){return topCard(card,legNum)}
+  return notTop(card,legNum)
+}
+
+
+
+function printLegs(){
+  let output = []
+  for(let i in tableu){
+    let line = [...this['leg' + i]];
+    //console.log(line);
+    document.getElementById('cleg' + i).innerHTML = '<div style="line-height:50%;">' + legDisplay(line,i) + '</div>';
+  }
+}
+
+/////////////////////////controls\\\\\\\\\\\\\\\\\\\\\\
+function buttonPress (button) {
+  
+  if(cursorMode == 'listless') {cursorMode = 'search'}
+  switch(button){
+    case 87:
+    case 38:
+    case 111:
+      butUp();
+      break;
+    case 65:
+    case 37:
+      butLeft();
+      break;
+    case 83:
+    case 40:
+    case 106:
+      butDown();
+      break;
+    case 68:
+    case 39:
+      butRight();
+      break;
+    case 32:
+    case 17:
+    case 107:
+      butAction();
+      break;
+    case 13:
+    case 82:
+      butDeal();
+      break;
+    case 49:
+    case 97:
+      warpS(0);
+    	break;
+    case 50:
+    case 98:
+      warpS(1);
+      break;
+    case 51:
+    case 99:
+      warpS(2);
+      break;
+    case 52:
+    case 100:
+      warpS(3);
+      break;
+    case 53:
+    case 101:
+      warpS(4);
+      break;
+    case 54:
+    case 102:
+      warpS(5);
+      break;
+    case 55:
+    case 103:
+      warpS(6);
+      break;
+    case 56:
+    case 104:
+      warpS(7);
+      break;
+    case 57:
+    case 105:
+      warpS(8);
+      break;
+    case 48:
+    case 96:
+      warpS(9);
+      break;
+    default:
+      layoutGen();
+      break;
+  }
+  if(cursor[cursorMode] <= -1){cursor[cursorMode] = game.legs -1}
+  if(cursor[cursorMode] >= game.legs){cursor[cursorMode] = cursor[cursorMode] % game.legs}
+  layoutGen();
+}
+function butDeal() {
+  cursorMode = 'listless';
+  if(drawDeck.length <= game.legs){
+  	deal(game.legs,true);
+  	return;
+  } else if(drawDeck.length > 0){
+    if(game.relaxed == true){
+      deal(game.legs, true)
+    } else {newDeal(game.legs,true)}
+  }
+//  scursor = {...cursorStart};
+//  pcursor = {...cursorStart};
+  layoutGen();
+}
+
+function clickOn (cardpos,legNum) {
+  //console.log(cardpos,legNum);
+  if(cursorMode == 'stack'){
+    cursor.stack = legNum;
+    buttonPress(32);
+  	cursorMode = 'listless';
+  	layoutGen();
+  	return;
+  	} 
+  //console.log(cursorMode);
+  if(cursorMode != 'stack' && cardpos != 0){
+  	cursorMode = 'search';
+    pcursor.leg = legNum;
+    pcursor.depth = tableu[legNum].length - cardpos - 1;
+    cursor.search = legNum;
+    cursor.searchDepth = 0;
+    let depthTarget = tableu[legNum].length - cardpos;
+    for(let i = 1;i <= depthTarget; i++){
+      buttonPress(87)
+    }
+    buttonPress(32);
+    
+    
+    showCursor();
+    /*
+    let output = [...this['cleg' + legNum]];
+    console.log(tableu[legNum][cardpos - 1]);
+    output.splice(cursor.searchDepth - 1, 0,downArrow);
+	  //console.log(output);  
+    document.getElementById('cleg' + legNum).innerHTML = '<div style="line-height:50%;">' + output.join('<br>') + '</div>';*/
+  }
+}
+
+//player controls  wasd space enter/enternum
+//87,65,83,68,32,13,13
+function butUp() {
+	if(cursorMode == 'search'){cursorUp()}
+  if(cursorMode == 'stack'){suitCheck()}
+}
+function butLeft() {
+  cursor[cursorMode]--;  
+  if(cursorMode == 'search'){cursor.searchDepth = 0}
+}
+function butDown() {
+	if(cursor.searchDepth != 0){cursor.searchDepth--}
+}
+function butRight() {
+	cursor[cursorMode]++;
+  if(cursorMode == 'search'){cursor.searchDepth = 0}
+}
+function butAction() {
+	if(cursorMode == 'search'){
+    grabStack();    
+  }else {
+    	if(cursorMode == 'stack'){
+  			placeStack();
+    		cursorMode = 'listless'
+      }
+  }	
+}
+
+////////////////////////6.0 new actions\\\\\\\\\\\\\\\\\\\\\\\\
+function grabStack(){
+  cursor.stack = cursor.search;
+  cursorMode = 'stack';
+}
+
+
+function placeStack(){
+  if(cursor.foundation == 0){
+    matchCol();
+  } else {
+    foundationPush();
+  }
+  cursor.foundation = 0;
+}
+
+function foundationClick() {
+  cursor.searchDepth = 1;
+  buttonPress(32);
+  }
+
+
+var floatCards = [];
+function stackCol() {
+  for(let i in tableu){
+    if(i == cursor.search){
+      floatCards = this['leg' + i].splice(this['leg' + i].length - 1 - cursor.searchDepth);
+    }
+  }
+  for(let i in tableu){
+    if(i == cursor.stack){
+      for(let card of floatCards){
+        this['leg' + i].push(card);
+      }
+  	}
+	}
+  cursor.search = cursor.stack;
+}
+
+
+function matchCol() {
+  let grabLeg = tableu[cursor.search];
+  let dropLeg = tableu[cursor.stack];
+  let grabLegTop = grabLeg[grabLeg.length - 1 - cursor.searchDepth];
+  //console.log(grabLeg);
+  //console.log(grabLegTop);
+  let dropLegBottom = dropLeg[dropLeg.length - 1];
+  //console.log(grabLegTop, dropLegBottom);
+  if(dropLegBottom == 'bot' || grabLegTop.value == dropLegBottom.value - 1 || dropLegBottom.value == 'Z' || (game.kOnA == true && grabLegTop.value == highCard && dropLegBottom.value == 1) || grabLegTop.value == "Z" ) {
+
+//  if(dropLegBottom == 'bot' || grabLegTop.value == dropLegBottom.value - 1 || dropLegBottom.value == '0' || (game.kOnA == true && grabLegTop.value == highCard && dropLegBottom.value == 1) || (game.kOnA == true && game.noFaceCards == true && grabLegTop.value == highCard && dropLegBottom.value == 1)) {
+  
+    //console.log('match');
+    stackCol();
+    scursor = {leg:pcursor.leg,depth:0};
+  } 
+ 	for(let grabLeg in tableu){
+    if(grabLeg == scursor.leg){
+  	}    
+  }
+}
+
+var topCardSuit = '';
+function cursorUp() {
+  
+  for(let i in tableu){
+    if(i == cursor.search){
+      let current = tableu[i][tableu[i].length - cursor.searchDepth - 1];
+      let next = tableu[i][tableu[i].length - cursor.searchDepth - 2];
+      //console.log('ho' , current);
+      //console.log('hey' , next);
+      if(current.value == next.value - 1 || current.value == 'Z' || next.value == 'Z' || (game.kOnA == true &&(current.value == highCard && next.value == 1) 
+//      || (game.noFaceCards == true &&(current.value == 10 && next.value == 1))
+)){
+        if(current.suit == next.suit){
+          topCardSuit = current.suit;
+          //console.log('suit match');
+          cursor.searchDepth++;
+          cursor.searchDepth = cursor.searchDepth % tableu[i].length;
+        }
+      }
+    }
+  }
+}
+function foundRefresh(){
+  for(let i in foundation){
+    let line = 'found' + i
+    document.getElementById(line).innerHTML = this['found' + i];
+    }
+}
+
+
+function foundButt(){
+  found[foundation.indexOf(emptyCell)] = '<button onClick="foundationPush" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'
+  foundRefresh();
+}
+
+const foundationSuit = (suit) => {
+    if(suit == '\u{2665}' || suit == '\u{2666}'){
+    suit = '<span style="color:#DF481C;">' + suit + '</span>';
+  }
+  return suit;
+}
+
+function foundationPush(){
+  if(matchSuit() == true){
+  	foundation[foundation.indexOf(emptyCell)] = foundationSuit(topCardSuit);
+    foundRefresh();
+    cursor.search = 0;
+    cursor.searchDepth = 0;
+    cursor.foundation = 0;
+    cursorMode = 'listless';
+    layoutGen();
+  }
+}
+
+function matchSuit() {
+  let grabLeg = tableu[cursor.search];
+  let grabLegTop = grabLeg.slice(grabLeg.length - 1 - cursor.searchDepth);
+  //console.log('grabLeg = ' + grabLeg + '\ngrabLegTop = ' + grabLegTop);
+ 
+   if(grabLegTop[0].value == highCard && grabLegTop[grabLegTop.length - 1].value == 1){
+   // console.log('full match')
+      tableu[cursor.search].splice(tableu[cursor.search].length - 1 - cursor.searchDepth);
+      return true;
+    	}
+/*  
+  if(!game.noFaceCards){
+    if(grabLegTop[0].value == 13 && grabLegTop[grabLegTop.length - 1].value == 1){
+   // console.log('full match')
+      tableu[cursor.search].splice(tableu[cursor.search].length - 1 - cursor.searchDepth);
+      return true;
+    	}
+    }
+  if(game.noFaceCards && grabLegTop[0].value == 10 &&  grabLegTop[grabLegTop.length - 1].value == 1){
+      	tableu[cursor.search].splice(tableu[cursor.search].length - 1 - cursor.searchDepth);
+      	return true;
+      }
+ */   
+}
+
+
+
+function suitCheck() {
+	cursor.foundation = 1;
+}
+
+function warpS(column) {
+  if(cursorMode == 'search'){
+    cursor.search = column;
+    cursor.searchDepth = 0;
+  } else{
+    cursor.stack = column;
+    cursor.foundation = 0;
+  }
+}
+  
+///////////////////////////////5.0 actions code\\\\\\\\\\\\\\\\\\\\\\\\
+
+var keys = [];
+
+document.addEventListener("keyup", function(e) {
+  keys[e.keyCode] = false;
+});
+
+document.addEventListener("keydown", function(e) {  
+  e.preventDefault(); // make sure this doesn't scroll the window
+  keys[e.keyCode] = true;
+  //console.log(e.keyCode);
+  buttonPress(e.keyCode);
+  }
+ )
+
+///////////////////////////////NEW GAME\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+function newGame(){
+  document.getElementById('banana').innerHTML = '';
+  console.log('building deck ');
+  deckBuild();
+  console.log('building draw deck');
+  shuffle(drawDeck); 
+  console.log('buildlayout');
+  buildLayout();
+  console.log(tableu);
+  visualTableBuild();
+  console.log('new game');
+  layoutGen();
+  console.log('leyout');
+  newGameDeal();
+  
+  printLegs();
+  layoutGen();
+  
+  document.getElementById('yi').innerHTML = '<button class="customSubmitButton" onclick="startOver()">Go Back</button>';
+}
+function startOver(){
+document.getElementById('yo').innerHTML = '';
+  mainMenu();
+  document.getElementById('yi').innerHTML = '';
+}
+
+</script>
+
+</html>
