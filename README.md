@@ -1,4 +1,8 @@
 # spider-solitaire-
+<br>
+06/22/2023
+work begins on making all of my own suit pips (heart, club, spade, and diamond ((the hardest one))) it seems "there is no way to control the rendering of emojis" and compatibility is zero for the appearance of the suits.  it shouldn't take long (it might take ages) but in the mean time I might default the pips to something else instead of the classic four since blue heart even comes up as a red heart for android.   Apparently, edge may do this as well, however, i have not tested edge as i do not have it installed.
+<br>
 06/21/2023
 Custom menu: wild card works. Randomize increases difficulty chance each click by design. (i.e. one click is easy random, two clicks is harder and so on) Suit number counter hidden to prevent game breaking also it was pointless(haha get it no pointer haha) now I will test it by playing a bazillion games.  New modes in development.
 06/20/2023 Custom menu: wildcard still broken.  Randomize breaks the game.  Suit number has to match highlighted pip or game will break.  Everything else works probably'
