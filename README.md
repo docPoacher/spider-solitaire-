@@ -7,7 +7,7 @@ for the time being all the pips have been replaced with alternatives.  I hope th
 Cloud pip looks too soft (too cloudy) so we'll use something else maybe<br>
 06/22/2023
 work begins on making all of my own suit pips (heart, club, spade, and diamond ((the hardest one))) it seems "there is no way to control the rendering of emojis" and compatibility is zero for the appearance of the suits.  it shouldn't take long (it might take ages) but in the mean time I might default the pips to something else instead of the classic four since blue heart even comes up as a red heart for android.   Apparently, edge may do this as well, however, i have not tested edge as i do not have it installed.<br>
-https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4and1.HTML
+https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4and1.html
 
 <br>
 06/21/2023
