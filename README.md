@@ -1,5 +1,10 @@
 # spider-solitaire-
 <br>
+06/22/2023#2
+if you enter a game and attempt to start another game without refreshing your browser you will not be able to use the android keyboard or any keyboard for that matter to change the custom values.  for the time being the increase and decrease buttons are only available for PC users and some apple devices
+android is becoming increaseingly frustrating to work with
+for the time being all the pips have been replaced with alternatives.  I hope the game is still playable for all of the two of you.  also, some old code was in that was preventing entry of numbers into the android version of the custom menu, meaning the TWO OF YOU were either not trying the custom menu or were not sure what you should have been doing.<br>
+Cloud pip looks too soft (too cloudy) so we'll use something else maybe<br>
 06/22/2023
 work begins on making all of my own suit pips (heart, club, spade, and diamond ((the hardest one))) it seems "there is no way to control the rendering of emojis" and compatibility is zero for the appearance of the suits.  it shouldn't take long (it might take ages) but in the mean time I might default the pips to something else instead of the classic four since blue heart even comes up as a red heart for android.   Apparently, edge may do this as well, however, i have not tested edge as i do not have it installed.
 <br>
