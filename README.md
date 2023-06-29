@@ -1,4 +1,6 @@
 # spider-solitaire-
+CURRENT VERSION: https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
+<br>
 <br>
 06/29/2023
 I made my own pips.  Plans for the future pips include rose and pink flower thing.  The blue thing is supposed to be a fish but it looks more like the barefoot wine logo.  I apologize for my shade thrown at one of the testers.  I did not realize that they did not use android phone.  I jumped to the conclusion because they mentioned they would need to use someone elses apple laptop to test the game and I wrongly assumed this meant they did have an apple phone.  That fact aside, they may have had a windows phone from 20 years ago or one of those new linux phones.  Also, it is possible that they had a grandpa flip phone or maybe no cell phone at all.  This brings up an interesting idea: maybe there are people out there still using magic jack to call people from a computer?  It is possible that they might consider their PC as their phone.
