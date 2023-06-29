@@ -1,5 +1,12 @@
 # spider-solitaire-
 <br>
+06/29/2023
+I made my own pips.  Plans for the future pips include rose and pink flower thing.  The blue thing is supposed to be a fish but it looks more like the barefoot wine logo.  I apologize for my shade thrown at one of the testers.  I did not realize that they did not use android phone.  I jumped to the conclusion because they mentioned they would need to use someone elses apple laptop to test the game and I wrongly assumed this meant they did have an apple phone.  That fact aside, they may have had a windows phone from 20 years ago or one of those new linux phones.  Also, it is possible that they had a grandpa flip phone or maybe no cell phone at all.  This brings up an interesting idea: maybe there are people out there still using magic jack to call people from a computer?  It is possible that they might consider their PC as their phone.
+<br>
+After testing there will be the final release of version 1.0.  2.0 will have animations and 3.0 will have a Excel Spreadsheet interpretation.
+<br>
+https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
+<br>
 06/22/2023#2
 if you enter a game and attempt to start another game without refreshing your browser you will not be able to use the android keyboard or any keyboard for that matter to change the custom values.  for the time being the increase and decrease buttons are only available for PC users and some apple devices
 android is becoming increaseingly frustrating to work with
