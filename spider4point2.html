@@ -496,7 +496,7 @@ var suitPips = ['&#9824','<svg id="heartPip" style="z-index:0" viewBox="0 0 146 
 
 var highCard = 13;
 
-var menuModeArr =['Classic','Spiderette','9Legs','Tarantula','Will o Wisp','Custom','What is new?'];
+var menuModeArr =['Classic','Spiderette','9Legs','Tarantula','Will o Wisp','Custom','What is new?','HOW TO PLAY'];
 var menuDifficultyArr = ['easy','medium','hard'];
 var menuCustomizeNum = ['decks','suits','legs'];
 
@@ -683,6 +683,9 @@ function menuCustomSubmit(){
 
 function menuSelection(){
   console.log('hey');
+  if(game.version == 'How to play'){
+	  window.location.href='https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/howto.html'
+  }
   if(game.version == 'What is new?'){
   document.getElementById('banana').innerHTML = updates
   }else if(game.version == 'Custom'){
