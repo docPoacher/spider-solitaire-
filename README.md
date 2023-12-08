@@ -1,6 +1,22 @@
 # spider-solitaire-
+What is?
+Spider Solitaire is a fun game
+but could it be more fun?
+maybe even more game?
+
+To do:  
+Save states (probably a cookie that allows one single save game per device that gets erased upon load)
+Redo (one single step back per game for people who may have made an oopsie doopsie)
+more fancy animations
+better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once
+modularity is pretty good but im still experimenting with different platforms and possibly an envelope for quicker android touch controls since android is very unique
+i have to fix the bathroom still
+
+feel free to share this link V V V V
+
 CURRENT VERSION: https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
 <br>
+(no longer refreshes with pull down or zoom out please let me know if it resets mid game for you)
 <br>
 07/31/2023
 <br>
