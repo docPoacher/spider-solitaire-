@@ -14,7 +14,7 @@ i have to fix the bathroom still<br>
 <br>
 feel free to share this link V V V V<br>
 <br>
-CURRENT VERSION: https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
+<strong>CURRENT VERSION:</strong> https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
 <br>
 (no longer refreshes with pull down or zoom out please let me know if it resets mid game for you)<br>
 <br>
