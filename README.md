@@ -18,6 +18,10 @@ feel free to share this link V V V V<br>
 <br>
 (no longer refreshes with pull down or zoom out please let me know if it resets mid game for you)<br>
 <br>
+<br>
+For keyboard play: https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point3.html
+<br>
+<br>
 07/31/2023
 <br>
 Hello all, I have finally disabled pull down refresh (works on android have not tested apple).  I had several close calls on my long vacation.  I have been testing every one of the options and so far everything appears to work well.  Will O' Wisp has become a new favorite.  Keeping the same version number since I did not debug any game feature only added code to the HTML style.
