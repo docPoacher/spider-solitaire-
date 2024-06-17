@@ -1520,6 +1520,28 @@ document.getElementById('yo').innerHTML = '';
   document.getElementById('yi').innerHTML = '';
 }
 
+//////////////////////////////////cookie area\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+var cookieold = '';
+function generateState() {
+  for(let i = 0;i <= legs-1;i++){
+    cookieold.tableu.push(JSON.stringify(this['leg' + i]));
+  }
+  for(let i = 0;i <= foundation.length-1;i++){
+    cookieold.foundation.push(JSON.stringify(this['found' + i]));
+  }
+  for(let i = 0;i <= legs-1;i++){
+    cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
+  }
+}
+	
+	
+function getAlltheCookies() {
+  document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }),{});
+}
+
+
+	
 </script>
 
 </html>
