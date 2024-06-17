@@ -464,6 +464,18 @@ svg {
 </body>
 
 <script>
+
+	
+function addState() {
+  if (typeof localStorage.gameState == "undefined") {
+   localStorage.gameState = 0;
+}
+
+  localStorage.gameState++;
+  localStorage.gameState
+}	
+
+	
 /*
 //options menu
 var menu = {suits:4,legs:10,kOnA:false,relaxed:true};
