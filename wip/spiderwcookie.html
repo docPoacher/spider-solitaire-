@@ -1552,6 +1552,11 @@ function saveState() {
   cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
 }
 
+function saveGame() {
+  makeState();
+  saveState();
+}
+	
 function loadState() {
   for(let i = 0;i <= game.legs-1;i++){
     console.log(i);
