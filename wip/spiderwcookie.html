@@ -1549,11 +1549,21 @@ function saveState() {
   for(let i = 0;i <= foundation.length-1;i++){
     cookieold.foundation.push(JSON.stringify(this['found' + i]));
   }
-  for(let i = 0;i <= legs-1;i++){
-    cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
-  }
+  cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
 }
-	
+
+function loadState() {
+  for(let i = 0;i <= game.legs-1;i++){
+    console.log(i);
+    this['leg' + i] = JSON.parse(cookieold.tableu[i]);
+  }
+  for(let i = 0;i <= game.decks-1;i++){
+    foundation[i] = JSON.parse(cookieold.foundation[i]);
+  }
+  drawDeck = JSON.parse(cookieold.drawdeck);
+}
+
+//layoutGen();
 	
 function getAlltheCookies() {
   document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }),{});
