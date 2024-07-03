@@ -1107,7 +1107,7 @@ function layoutGen(){
   if(cursorMode != 'listless'){showCursor()};
   ////////////////////Winning\\\\\\\\\\\\\\\\\\\\\\\\\\
   if(foundation.indexOf(emptyCell) == -1){
-  document.getElementById('yi').innerHTML = '<table><tr><td>wow great game you did it</td></td></tr?<tr><td><button class="customSubmitButton" onclick="startOver()">Exit to Menu</button></td><td><button class="customSubmitButton" onclick="loadState()">Load previous (cheat)</button></td></tr></table>';
+  document.getElementById('yi').innerHTML = '<table><tr><td>wow great game you did it</td></td></tr?<tr><td><button class="customSubmitButton" onclick="startOver()">Exit to Menu</button></td></tr></table>';
   console.log('win')
   
   }
@@ -1510,7 +1510,7 @@ document.addEventListener("keydown", function(e) {
   printLegs();
   layoutGen();
   
-  document.getElementById('yi').innerHTML = '<button class="customSubmitButton" onclick="startOver()">Exit to Menu</button>';
+  document.getElementById('yi').innerHTML = '<button class="customSubmitButton" onclick="startOver()">Exit to Menu</button> <button class="customSubmitButton" onclick="loadState()">Load previous (cheat)</button>';
 }
 function startOver(){
 document.getElementById('yo').innerHTML = '';
