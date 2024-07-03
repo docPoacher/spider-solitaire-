@@ -1561,6 +1561,10 @@ function loadState() {
     foundation[i] = JSON.parse(cookieold.foundation[i]);
   }
   drawDeck = JSON.parse(cookieold.drawdeck);
+  for(let i = 0;i <= game.legs-1;i++){
+    tableu[i] = this['leg' + i];
+  }
+  layoutGen();
 }
 
 //layoutGen();
