@@ -1535,9 +1535,14 @@ https://www.2000cranes.com/Kyoto-Mist/Hokanji-Temple.html
 */
 	
 //////////////////////////////////cookie area\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+var lastState = {};
+function makeState() {
+  cookieold = {tableu: [], foundation: [], drawdeck: []}
+}
+		
+var cookieold = []
 
-var cookieold = '';
-function generateState() {
+function saveState() {
   for(let i = 0;i <= legs-1;i++){
     cookieold.tableu.push(JSON.stringify(this['leg' + i]));
   }
