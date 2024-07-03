@@ -1031,8 +1031,6 @@ function visualFoundationBuild() {
     document.getElementById('found' + i).innerHTML = this['found' + i];
   }
 }
-
-
 function visualTableBuild() {
   let output = '<table class="mainTable"><tr><td id="stock"><button class=faceDownCard onclick="buttonPress(13)">....</button></td><td><div id="stockNo"></div></td>'
   for(let i in foundation){
@@ -1573,6 +1571,7 @@ function loadState() {
   for(let i = 0;i <= game.legs-1;i++){
     tableu[i] = this['leg' + i];
   }
+  document.getElementById('stock').innerHTML = '<button class=faceDownCard onclick="buttonPress(13)">...</button>';
   layoutGen();
 }
 
