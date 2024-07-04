@@ -1357,6 +1357,7 @@ function stackCol() {
   	}
 	}
   cursor.search = cursor.stack;
+	saveGame();
 }
 
 
@@ -1433,6 +1434,7 @@ function foundationPush(){
     cursor.foundation = 0;
     cursorMode = 'listless';
     layoutGen();
+    saveGame();
   }
 }
 
