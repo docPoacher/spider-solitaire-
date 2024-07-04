@@ -1357,7 +1357,7 @@ function stackCol() {
   	}
 	}
   cursor.search = cursor.stack;
-	saveGame();
+	
 }
 
 
@@ -1376,6 +1376,7 @@ function matchCol() {
     //console.log('match');
     stackCol();
     scursor = {leg:pcursor.leg,depth:0};
+    saveGame();
   } 
  	for(let grabLeg in tableu){
     if(grabLeg == scursor.leg){
