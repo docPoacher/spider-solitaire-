@@ -1609,9 +1609,48 @@ function getCookie(cname) {
   return "";
 }
 
-	
+function removeCookies() {
+	 var res = document.cookie;
+	 var multiple = res.split(";");
+	 for(var i=0;i<multiple.length;i++) {
+			var key = multiple[i].split("=");
+			document.cookie=key[0]+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+	 }
+}
+
+var encodedVar = '';
+var temporaryCookieArray = [];
+var pulledCookieArray = [];
+var decodedVar = '';
+function encodeCook(theCook){
+  encodedVar = btoa(JSON.stringify(theCook));
+	temporaryCookieArray = chunkString(encodedVar,200);
+	for (i in temporaryCookieArray){
+    document.cookie=i + "=" + temporCook[i];
+	}	
+}
+
+function decode(){
+  for (i in temporaryCookieArray){
+		pulledCookieArray.push(getCookie(i));
+  }
+	decodedVar = atob(pulledCookieArray.join(''));
+}
 	
 
+function chunkString (str, len) {
+  const size = Math.ceil(str.length/len)
+  const r = Array(size)
+  let offset = 0
+  
+  for (let i = 0; i < size; i++) {
+    r[i] = str.substr(offset, len)
+    offset += len
+  }
+  
+  return r
+}
+	
 </script>
 
 </html>
