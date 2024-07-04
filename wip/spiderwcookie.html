@@ -1245,6 +1245,7 @@ function buttonPress (button) {
   layoutGen();
 }
 function butDeal() {
+  saveGame();
   cursorMode = 'listless';
   if(drawDeck.length <= game.legs){
   	deal(game.legs,true);
@@ -1357,8 +1358,6 @@ function stackCol() {
   	}
 	}
   cursor.search = cursor.stack;
-  foundRefresh();
-  saveGame();
 }
 
 
@@ -1436,7 +1435,7 @@ function foundationPush(){
     cursor.foundation = 0;
     cursorMode = 'listless';
     layoutGen();
-    saveGame();
+    
   }
 }
 
