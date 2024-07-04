@@ -1537,24 +1537,30 @@ https://www.2000cranes.com/Kyoto-Mist/Hokanji-Temple.html
 //////////////////////////////////cookie area\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 var lastState = {};
 function makeState() {
-  cookieold = {tableu: [], foundation: [], drawdeck: []}
+  cookieold = {tableu: [], foundation: [], drawdeck: [], game: []}
 }
+
+var cookieCounter = 0;
 		
 var cookieold = []
 
 function saveState() {
+  cookieold.game.push(JSON.stringify(this['game']));
+  cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
   for(let i = 0;i <= legs-1;i++){
     cookieold.tableu.push(JSON.stringify(this['leg' + i]));
   }
   for(let i = 0;i <= foundation.length-1;i++){
     cookieold.foundation.push(JSON.stringify(this['found' + i]));
   }
-  cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
 }
 
 function saveGame() {
   makeState();
   saveState();
+  let tempCookie = JSON.stringify(cookieold);
+  document.cookie="state" + cookieCounter + "=" + tempCookie + ";expires=Wed, 18 Dec 2060 12:00:00 GMT";
+  cookieCounter = cookieCounter == 0 ? 1 : 0;
 }
 	
 function loadState() {
@@ -1575,8 +1581,12 @@ function loadState() {
   }
   document.getElementById('stock').innerHTML = '<button class=faceDownCard onclick="buttonPress(13)">...</button>';
   layoutGen();
+  cookieCounter = cookieCounter == 0 ? 1 : 0;
+  
 }
 
+
+	
 //layoutGen();
 	
 function getAlltheCookies() {
