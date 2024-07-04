@@ -1562,6 +1562,13 @@ function saveGame() {
   document.cookie="state" + cookieCounter + "=" + tempCookie + ";expires=Wed, 18 Dec 2060 12:00:00 GMT";
   cookieCounter = cookieCounter == 0 ? 1 : 0;
 }
+
+/// will need to get a method of the game recognizing when a new cookie should be made.  Right now, useing a plethora of commands: removeCookies() clears cookies, saveGame() makes a blank cookieold then a new cookieold (stupid), removeCookies() again, 
+/// then encodeCook() clears temporaryCookieArray and writes a new one encoded in base64 then pushes each cell to the document.cookie.  this results in a mess of numbered cookies.  Decode pulls the cookie and puts it in a just cleared
+/// pulledCookieArray and UNbase64s that to decodedVar.  To load the state, decodeVar must be PARSED to a new cookie, which is currently called "cookieold" which is how loadState() is currently written, so another function will have to do this or
+/// loadState() could just use decodedVar instead.  Maybe loadState() could parse.decodedVar then load from that (obvious next step, should consider).
+/// also to do:  how does the game know when to clear state and when to load a new one?  if it clears the state each time then you would not be able to go backwards, only to the current state.  this would be fine for reloading a game, but 
+/// not for moving back a step.  I could just use local memory for that, since its easier than a cookie, also, I don't even need local memory, I can just make a "previousState" var and rewrite that with each step.  This is the easy and logical solution.
 	
 function loadState() {
   for(let i = 0;i <= game.legs-1;i++){
@@ -1623,14 +1630,22 @@ var temporaryCookieArray = [];
 var pulledCookieArray = [];
 var decodedVar = '';
 function encodeCook(theCook){
+	temporaryCookieArray = [];
   encodedVar = btoa(JSON.stringify(theCook));
 	temporaryCookieArray = chunkString(encodedVar,200);
 	for (i in temporaryCookieArray){
-    document.cookie=i + "=" + temporCook[i];
+    document.cookie=i + "=" + temporaryCookieArray[i];
 	}	
 }
 
+function saveTempCookie(temporCook){
+  for (i in temporCook){
+    document.cookie=i + "=" + temporCook[i];
+  }
+}
+	
 function decode(){
+	pulledCookieArray = [];
   for (i in temporaryCookieArray){
 		pulledCookieArray.push(getCookie(i));
   }
