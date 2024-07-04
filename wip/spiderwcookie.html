@@ -512,7 +512,7 @@ var suitPips = ['&#9824','<svg id="heartPip" style="z-index:0" viewBox="0 0 146 
 
 var highCard = 13;
 
-var menuModeArr =['Classic','Spiderette','9Legs','Tarantula','Will o Wisp','Custom','What is new?','How to play'];
+var menuModeArr =['Classic','Spiderette','9Legs','Tarantula','Will o Wisp','Custom','What is new?','How to play','LOAD GAME!!'];
 var menuDifficultyArr = ['easy','medium','hard'];
 var menuCustomizeNum = ['decks','suits','legs'];
 
@@ -702,6 +702,10 @@ function menuSelection(){
    if(game.version == 'How to play'){
     window.location.href='https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/howto.html';
   }
+  if(game.version == 'LOAD GAME!!'){
+/////////////////////////////////
+		//document.getElementById('banana').innerHTML = '<table width="80%"><tr><td>' + genForm('How hard?','difficulty',menuDifficultyArr,buttonSelection,'startGame()',3) + '</td></td></table><p id="boarnana"></p>';
+	}
   if(game.version == 'What is new?'){
   document.getElementById('banana').innerHTML = updates
   }else if(game.version == 'Custom'){
@@ -1512,7 +1516,7 @@ document.addEventListener("keydown", function(e) {
 
 	////////////////// what the heck is going on here\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	
-  document.getElementById('yi').innerHTML = '<button class="customSubmitButton" onclick="startOver()">Exit to Menu</button> <button class="customSubmitButton" onclick="loadState()">Load previous (cheat)</button>';
+  document.getElementById('yi').innerHTML = '<button class="customSubmitButton" onclick="startOver()">Exit to Menu</button> <button class="customSubmitButton" onclick="loadState(cookieold)">Load previous (cheat)</button>';
 }
 function startOver(){
 document.getElementById('yo').innerHTML = '';
@@ -1558,8 +1562,6 @@ function saveState() {
 function saveGame() {
   makeState();
   saveState();
-  let tempCookie = JSON.stringify(cookieold);
-  document.cookie="state" + cookieCounter + "=" + tempCookie + ";expires=Wed, 18 Dec 2060 12:00:00 GMT";
   cookieCounter = cookieCounter == 0 ? 1 : 0;
 }
 
@@ -1570,15 +1572,17 @@ function saveGame() {
 /// also to do:  how does the game know when to clear state and when to load a new one?  if it clears the state each time then you would not be able to go backwards, only to the current state.  this would be fine for reloading a game, but 
 /// not for moving back a step.  I could just use local memory for that, since its easier than a cookie, also, I don't even need local memory, I can just make a "previousState" var and rewrite that with each step.  This is the easy and logical solution.
 	
-function loadState() {
+function loadState(cookie) {
+	if(cookie == ''){return};
+	game = JSON.parse(cookie.game);
   for(let i = 0;i <= game.legs-1;i++){
     console.log(i);
-    this['leg' + i] = JSON.parse(cookieold.tableu[i]);
+    this['leg' + i] = JSON.parse(cookie.tableu[i]);
   }
   for(let i = 0;i <= game.decks-1;i++){
-    foundation[i] = JSON.parse(cookieold.foundation[i]);
+    foundation[i] = JSON.parse(cookie.foundation[i]);
   }
-  drawDeck = JSON.parse(cookieold.drawdeck);
+  drawDeck = JSON.parse(cookie.drawdeck);
   for(let i = 0;i <= game.legs-1;i++){
     tableu[i] = this['leg' + i];
   }
@@ -1586,7 +1590,7 @@ function loadState() {
   for(let i = 0;i <= game.legs-1;i++){
     tableu[i] = this['leg' + i];
   }
-  document.getElementById('stock').innerHTML = '<button class=faceDownCard onclick="buttonPress(13)">...</button>';
+	if(drawDeck.length >= 1){document.getElementById('stock').innerHTML = '<button class=faceDownCard onclick="buttonPress(13)">...</button>'}
   layoutGen();
   cookieCounter = cookieCounter == 0 ? 1 : 0;
   
@@ -1634,13 +1638,13 @@ function encodeCook(theCook){
   encodedVar = btoa(JSON.stringify(theCook));
 	temporaryCookieArray = chunkString(encodedVar,200);
 	for (i in temporaryCookieArray){
-    document.cookie=i + "=" + temporaryCookieArray[i];
+    document.cookie='goopisss' + ('00' + i).slice(-3) + "=" + temporaryCookieArray[i];
 	}	
 }
 
-function saveTempCookie(temporCook){
-  for (i in temporCook){
-    document.cookie=i + "=" + temporCook[i];
+function saveTempCookie(theCook){
+  for (i in theCook){
+    document.cookie=i + "=" + theCook[i];
   }
 }
 	
