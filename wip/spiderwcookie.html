@@ -1375,9 +1375,6 @@ function matchCol() {
   
     //console.log('match');
 
-  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'}
-  if(cursorMode != "stack"){this ['found' + foundation.indexOf(emptyCell)] = emptyCell}
-	  
     saveGame();
     stackCol();
     scursor = {leg:pcursor.leg,depth:0};
@@ -1589,6 +1586,7 @@ function loadState(cookie) {
   }
   for(let i = 0;i <= game.decks-1;i++){
     foundation[i] = JSON.parse(cookie.foundation[i]);
+    foundation[foundation.indexOf('<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>')] = emptyCell
   }
   drawDeck = JSON.parse(cookie.drawdeck);
   for(let i = 0;i <= game.legs-1;i++){
