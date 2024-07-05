@@ -1374,6 +1374,7 @@ function matchCol() {
 //  if(dropLegBottom == 'bot' || grabLegTop.value == dropLegBottom.value - 1 || dropLegBottom.value == '0' || (game.kOnA == true && grabLegTop.value == highCard && dropLegBottom.value == 1) || (game.kOnA == true && game.noFaceCards == true && grabLegTop.value == highCard && dropLegBottom.value == 1)) {
   
     //console.log('match');
+    saveGame();
     stackCol();
     scursor = {leg:pcursor.leg,depth:0};
     
