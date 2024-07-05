@@ -1434,7 +1434,7 @@ const foundationSuit = (suit) => {
 
 function foundationPush(){
   if(matchSuit() == true){
-		saveGame();
+	//saveGame();
   	foundation[foundation.indexOf(emptyCell)] = foundationSuit(topCardSuit);
     foundRefresh();
     cursor.search = 0;
