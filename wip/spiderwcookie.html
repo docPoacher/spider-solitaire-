@@ -1374,6 +1374,10 @@ function matchCol() {
 //  if(dropLegBottom == 'bot' || grabLegTop.value == dropLegBottom.value - 1 || dropLegBottom.value == '0' || (game.kOnA == true && grabLegTop.value == highCard && dropLegBottom.value == 1) || (game.kOnA == true && game.noFaceCards == true && grabLegTop.value == highCard && dropLegBottom.value == 1)) {
   
     //console.log('match');
+
+  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'}
+  if(cursorMode != "stack"){this ['found' + foundation.indexOf(emptyCell)] = emptyCell}
+	  
     saveGame();
     stackCol();
     scursor = {leg:pcursor.leg,depth:0};
