@@ -1424,6 +1424,7 @@ function foundButt(){
   foundRefresh();
 }
 
+	
 const foundationSuit = (suit) => {
     if(suit == '\u{2665}' || suit == '\u{2666}'){
     suit = '<span style="color:#DF481C;">' + suit + '</span>';
@@ -1433,6 +1434,7 @@ const foundationSuit = (suit) => {
 
 function foundationPush(){
   if(matchSuit() == true){
+		saveGame();
   	foundation[foundation.indexOf(emptyCell)] = foundationSuit(topCardSuit);
     foundRefresh();
     cursor.search = 0;
@@ -1589,7 +1591,7 @@ function loadState(cookie) {
   }
   for(let i = 0;i <= game.decks-1;i++){
     foundation[i] = JSON.parse(cookie.foundation[i]);
-   
+    foundation[foundation.indexOf('<button onClick="foundationPush" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>')] = emptyCell;
   }
   drawDeck = JSON.parse(cookie.drawdeck);
   for(let i = 0;i <= game.legs-1;i++){
