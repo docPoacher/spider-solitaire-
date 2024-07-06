@@ -14,7 +14,11 @@ i have to fix the bathroom still<br>
 <br>
 feel free to share this link V V V V<br>
 <br>
-<strong>CURRENT VERSION:</strong> https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
+<strong>CURRENT VERSION:</strong>https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v2.html
+<br>
+(keyboard play not ready yet, I will remap all of the event listeners so some other commands might work. ((javascript does not possess the ability to kill ALL event listeners so I would have to enable and disable them individually)))
+<br>
+<strong>previous versions:</strong>https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point2.html
 <br>
 (no longer refreshes with pull down or zoom out please let me know if it resets mid game for you)<br>
 <br>
