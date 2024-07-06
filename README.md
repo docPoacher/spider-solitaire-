@@ -14,7 +14,7 @@ i have to fix the bathroom still<br>
 <br>
 feel free to share this link V V V V<br>
 <br>
-<strong>CURRENT VERSION:</strong>https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v2.html
+<strong>CURRENT VERSION NOW WITH BACK BUTTON FOR CHEATERS (most asked for feature):</strong>https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v2.html
 <br>
 (keyboard play not ready yet, I will remap all of the event listeners so some other commands might work. ((javascript does not possess the ability to kill ALL event listeners so I would have to enable and disable them individually)))
 <br>
