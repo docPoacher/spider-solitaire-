@@ -1582,6 +1582,8 @@ function saveGame() {
 /// loadState() could just use decodedVar instead.  Maybe loadState() could parse.decodedVar then load from that (obvious next step, should consider).
 /// also to do:  how does the game know when to clear state and when to load a new one?  if it clears the state each time then you would not be able to go backwards, only to the current state.  this would be fine for reloading a game, but 
 /// not for moving back a step.  I could just use local memory for that, since its easier than a cookie, also, I don't even need local memory, I can just make a "previousState" var and rewrite that with each step.  This is the easy and logical solution.
+
+/// IMPLIMENT encodeURIComponent() and decodeURIComponent() since atob and btobhbt cant read non- Latin1
 	
 function loadState(cookie) {
 	if(cookie == ''){return};
