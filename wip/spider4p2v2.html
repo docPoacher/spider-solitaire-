@@ -1667,9 +1667,9 @@ function saveTempCookie(theCook){
 function decode(){
 	pulledCookieArray = [];
   for (i in temporaryCookieArray){
-		pulledCookieArray.push(getCookie(i));
+		pulledCookieArray.push(getCookie('goopisss' + ('00' + i).slice(-3)));
   }
-	decodedVar = atob(pulledCookieArray.join(''));
+	decodedVar = JSON.parse(atob(pulledCookieArray.join('')));
 }
 	
 
