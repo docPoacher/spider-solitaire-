@@ -1552,23 +1552,37 @@ https://www.2000cranes.com/Kyoto-Mist/Hokanji-Temple.html
 //////////////////////////////////cookie area\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 var lastState = {};
 function makeState() {
-  cookieold = {tableu: [], foundation: [], drawdeck: [], game: []}
+  cookieold = {tableu: [], foundation: [], drawdeck: [], game: []};
+  cookieDoc = [];
 }
 
 var cookieCounter = 0;
 		
-var cookieold = []
+var cookieold = [];
+///   Start edit
+var cookieDoc = [];
 
+function compressSuit(string){
+  return string.replaceAll(`<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"` , ‘#suit’)
+}
+
+	
 function saveState() {
   cookieold.game.push(JSON.stringify(this['game']));
+  cookieDoc.game.push(JSON.stringify(this['game']));
   cookieold.drawdeck.push(JSON.stringify(this['drawDeck']));
+	cookieDoc.drawdeck.push(JSON.stringify(this['drawDeck']));
   for(let i = 0;i <= legs-1;i++){
     cookieold.tableu.push(JSON.stringify(this['leg' + i]));
+		cookieDoc.tableu.push(JSON.stringify(this['leg' + i]));
   }
   for(let i = 0;i <= foundation.length-1;i++){
     cookieold.foundation.push(JSON.stringify(this['found' + i]));
+		cookieDoc.foundation.push(JSON.stringify(this['found' + i]));
   }
 }
+
+///edite
 
 function saveGame() {
   makeState();
