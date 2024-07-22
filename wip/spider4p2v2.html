@@ -1565,7 +1565,9 @@ var cookieDoc = [];
 function compressSuit(string){
   return string.replaceAll(`<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"` , `#suit`)
 }
-
+function decompressSuit(string){
+  return string.replaceAll(`#suit`,`<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`)
+}	
 	
 function saveState() {
   cookieold.game.push(JSON.stringify(this['game']));
