@@ -1,0 +1,73 @@
+["bot",{
+
+["bot",{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"13"},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#bell\"/></svg>&nbsp;&nbsp;","value":"10"},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"11"},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#diamond\"/></svg>&nbsp;&nbsp;","value":"4"},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#heart\"/></svg>&nbsp;&nbsp;","value":"6","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#fish\"/></svg>&nbsp;&nbsp;","value":"2","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"12","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#bell\"/></svg>&nbsp;&nbsp;","value":"3","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"9","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"6","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#club\"/></svg>&nbsp;&nbsp;","value":"13","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#acorn\"/></svg>&nbsp;&nbsp;","value":"1","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#heart\"/></svg>&nbsp;&nbsp;","value":"5","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"5","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"7","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"8","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#acorn\"/></svg>&nbsp;&nbsp;","value":"2","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#club\"/></svg>&nbsp;&nbsp;","value":"1","vis":true}]
+
+`\\"/></svg>&nbsp;&nbsp;",`
+
+`\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`
+`\\\"/></svg>&nbsp;&nbsp;\",\"value\":`
+
+'["bot",{#pr#diamond#po10"},{#pr#heart#po12"},{#pr#diamond#po8"},{#pr#club#po6"},{#pr#sun#po1","vis":true},{#pr#spade#po3","vis":true},{#pr#diamond#po1","vis":true},{#pr#spade#po9","vis":true},{#pr#diamond#po4","vis":true},{#pr#fish#po4","vis":true},{#pr#heart#po11","vis":true},{#pr#acorn#po1","vis":true},{#pr#acorn#po13","vis":true}]'
+
+function compressCookie(string){
+let a = string.replaceAll(`\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`,`#pr`);
+let b = a.replaceAll(`\\\"/></svg>&nbsp;&nbsp;\",\"value\":\"`,`#po`);
+return b;
+}
+
+#2d
+
+var zipCardSuit =['#spade','#heart','#club','#diamond','#bell','#acorn','#fish','#sun'];
+var zipCardValue = {a:"1",b:"2",c:"3",d:"4",e:"5",f:"6",g:"7",h:"8",i:"9",j:"10",k:"11",l:"12",m:"13",z:"z"};
+var zipCardFix = [`{\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`,`\\\"/></svg>&nbsp;&nbsp;\",\"value\":\"`,`\\",\\"vis\\":true`,`","vis":true`]
+
+function zipCard(str){
+  let a = str.replaceAll(zipCardFix[0],``);
+  let b = a;
+  for(let i in zipCardSuit){
+    b = b.replaceAll(zipCardSuit[i],(`#` + i))
+    console.log(zipCardSuit[i]);
+  }
+  let c = b.replaceAll(zipCardFix[1],`#v`);
+  let d = c.replaceAll(zipCardFix[3],`#t`);
+  return d;
+}
+
+function unzipCard(str){
+  let a = str.replaceAll(`#t`,zipCardFix[3]);
+  let b = a.replaceAll(`#v`,zipCardFix[1]);
+  let c = b;
+  for(let i in zipCardSuit){
+    c = c.replaceAll((`#` + i), (zipCardFix[0] + zipCardSuit[i]));
+  }
+  return c;
+}
+	
+function zipCookie(cookie){
+  let out = cookie;
+  for(let i in cookie){
+    for(let x in cookie[i]){
+      for(let z in cookie[i][x]){
+        
+}
+
+
+function decompressCookie(string){
+let a = string.replaceAll(`#pr`,`\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`);
+let b = a.replaceAll(`#po`,`\\\"/></svg>&nbsp;&nbsp;\",\"value\":\"`);
+return b;
+}
+
+{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"13"}	
+
+"13"}
+
+
+
+#pr#sun#po#v13#f
+
+
+,{
+"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#bell\"/></svg>&nbsp;&nbsp;","value":"10"
+}
+,{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"11"},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#diamond\"/></svg>&nbsp;&nbsp;","value":"4"},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#heart\"/></svg>&nbsp;&nbsp;","value":"6","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#fish\"/></svg>&nbsp;&nbsp;","value":"2","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"12","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#bell\"/></svg>&nbsp;&nbsp;","value":"3","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"9","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"6","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#club\"/></svg>&nbsp;&nbsp;","value":"13","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#acorn\"/></svg>&nbsp;&nbsp;","value":"1","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#heart\"/></svg>&nbsp;&nbsp;","value":"5","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#sun\"/></svg>&nbsp;&nbsp;","value":"5","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"7","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#spade\"/></svg>&nbsp;&nbsp;","value":"8","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#acorn\"/></svg>&nbsp;&nbsp;","value":"2","vis":true},{"suit":"<svg class=\"circle\" viewBox=\"0 0 150 150\" height=\".6em\" width=\".6em\" style=\"align-items: center;\"><use xlink:href=\"#club\"/></svg>&nbsp;&nbsp;","value":"1","vis":true}]
