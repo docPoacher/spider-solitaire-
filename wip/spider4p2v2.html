@@ -1604,7 +1604,7 @@ function saveGame() {
 	
 var zipCardSuit =['#spade','#heart','#club','#diamond','#bell','#acorn','#fish','#sun'];
 var zipCardValue = {a:"1",b:"2",c:"3",d:"4",e:"5",f:"6",g:"7",h:"8",i:"9",j:"10",k:"11",l:"12",m:"13",z:"z"};
-var zipCardFix = [`\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`,`\\\"/></svg>&nbsp;&nbsp;\",\"value\":\"`,`\\",\\"vis\\":true`,`","vis":true`]
+var zipCardFix = [`{\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`,`\\\"/></svg>&nbsp;&nbsp;\",\"value\":\"`,`\\",\\"vis\\":true`,`","vis":true`]
 
 function zipCard(str){
   let a = str.replaceAll(zipCardFix[0],``);
