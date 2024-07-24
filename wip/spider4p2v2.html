@@ -1598,7 +1598,37 @@ function saveGame() {
 /// loadState() could just use decodedVar instead.  Maybe loadState() could parse.decodedVar then load from that (obvious next step, should consider).
 /// also to do:  how does the game know when to clear state and when to load a new one?  if it clears the state each time then you would not be able to go backwards, only to the current state.  this would be fine for reloading a game, but 
 /// not for moving back a step.  I could just use local memory for that, since its easier than a cookie, also, I don't even need local memory, I can just make a "previousState" var and rewrite that with each step.  This is the easy and logical solution.
+
+
+////////////////  ZIPPPER \\\\\\\\\\\\\\\\\\\\\\
 	
+var zipCardSuit =['#spade','#heart','#club','#diamond','#bell','#acorn','#fish','#sun'];
+var zipCardValue = {a:"1",b:"2",c:"3",d:"4",e:"5",f:"6",g:"7",h:"8",i:"9",j:"10",k:"11",l:"12",m:"13",z:"z"};
+var zipCardFix = [`\"suit\":\"<svg class=\\\"circle\\\" viewBox=\\\"0 0 150 150\\\" height=\\\".6em\\\" width=\\\".6em\\\" style=\\\"align-items: center;\\\"><use xlink:href=\\\"`,`\\\"/></svg>&nbsp;&nbsp;\",\"value\":\"`,`\\",\\"vis\\":true`,`","vis":true`]
+
+function zipCard(str){
+  let a = str.replaceAll(zipCardFix[0],``);
+  let b = a;
+  for(let i in zipCardSuit){
+    b = b.replaceAll(zipCardSuit[i],(`#` + i))
+    console.log(zipCardSuit[i]);
+  }
+  let c = b.replaceAll(zipCardFix[1],`#v`);
+  let d = c.replaceAll(zipCardFix[3],`#t`);
+  return d;
+}
+
+function unzipCard(str){
+  let a = str.replaceAll(`#t`,zipCardFix[3]);
+  let b = a.replaceAll(`#v`,zipCardFix[1]);
+  let c = b;
+  for(let i in zipCardSuit){
+    c = c.replaceAll((`#` + i), (zipCardFix[0] + zipCardSuit[i]));
+  }
+  return c;
+}
+
+////////////////  END ZIPPPER \\\\\\\\\\\\\\\\\\\\\\
 function loadState(cookie) {
 	if(cookie == ''){return};
 	game = JSON.parse(cookie.game);
@@ -1673,7 +1703,7 @@ function encodeCook(theCook){
     document.cookie='goopisss' + ('00' + i).slice(-3) + "=" + temporaryCookieArray[i];
 	}	
 }
-
+	
 function saveTempCookie(theCook){
   for (i in theCook){
     document.cookie=i + "=" + theCook[i];
