@@ -1628,6 +1628,35 @@ function unzipCard(str){
   return c;
 }
 
+var zipCardFox = [`{\\"suit\\":\\"<svg class=\\\\\\"circle\\\\\\" viewBox=\\\\\\"0 0 150 150\\\\\\" height=\\\\\\".6em\\\\\\" width=\\\\\\".6em\\\\\\" style=\\\\\\"align-items: center;\\\\\\"><use xlink:href=\\\\\\"`,`\\\\\\"/></svg>&nbsp;&nbsp;\\",\\"value\\":\\"`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":false}`,`"\\"&#8224\\""`]
+
+
+function zipCard2(str){
+  let a = str.replaceAll(zipCardFox[0],``);
+  let b = a;
+  for(let i in zipCardSuit){
+    b = b.replaceAll(zipCardSuit[i],(`#` + i))
+    console.log(zipCardSuit[i]);
+  }
+  let c = b.replaceAll(zipCardFox[1],`#v`);
+  let d = c.replaceAll(zipCardFox[3],`#t`);
+  let e = d.replaceAll(zipCardFox[4],`#f`);
+
+  return e;
+}
+
+function unzipCard2(str){
+  let a = str.replaceAll(`#t`,zipCardFox[3]);
+  let b = a.replaceAll(`#v`,zipCardFox[1]);
+  let c = b;
+  for(let i in zipCardSuit){
+    c = c.replaceAll((`#` + i), (zipCardFox[0] + zipCardSuit[i]));
+  }
+  c = c.replaceAll(`#f`,zipCardFox[4]);
+  return c;
+}
+
+
 ////////////////  END ZIPPPER \\\\\\\\\\\\\\\\\\\\\\
 function loadState(cookie) {
 	if(cookie == ''){return};
