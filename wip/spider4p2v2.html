@@ -703,7 +703,9 @@ function menuSelection(){
     window.location.href='https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/howto.html';
   }
   if(game.version == 'LOAD GAME!!'){
-    console.log('loading cookie')
+    console.log('loading cookie');
+    getGame();
+		
   }
   if(game.version == 'What is new?'){
   document.getElementById('banana').innerHTML = updates
