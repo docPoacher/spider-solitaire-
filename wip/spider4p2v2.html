@@ -703,9 +703,8 @@ function menuSelection(){
     window.location.href='https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/howto.html';
   }
   if(game.version == 'LOAD GAME!!'){
-/////////////////////////////////
-		//document.getElementById('banana').innerHTML = '<table width="80%"><tr><td>' + genForm('How hard?','difficulty',menuDifficultyArr,buttonSelection,'startGame()',3) + '</td></td></table><p id="boarnana"></p>';
-	}
+    console.log('loading cookie')
+  }
   if(game.version == 'What is new?'){
   document.getElementById('banana').innerHTML = updates
   }else if(game.version == 'Custom'){
@@ -722,6 +721,9 @@ function menuSelection(){
 
 function startGame(){
   if(game.noFaceCards){highCard = 10};
+  if(game.version == 'LOAD GAME!!'){
+
+  }
   if(game.version == 'Tarantula'){
     game.kOnA = true;
   }
