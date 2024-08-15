@@ -1705,9 +1705,24 @@ function loadState(cookie) {
 //layoutGen();
 	
 function getAlltheCookies() {
-  document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }),{});
+  return document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: (value) }),{});
 }
 
+function loadCookie(){
+  let tempC1 = getAlltheCookies();
+  let tempC2 = '';
+  for(let i in tempC1){
+    tempC2 = tempC2 + tempC1[i];
+    }
+  return tempC2;
+}
+
+function getGame(){
+  cookie22 = loadCookie();
+  let tempC = JSON.parse(cookie22);
+  game = JSON.parse(tempC.game);
+}
+	
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
