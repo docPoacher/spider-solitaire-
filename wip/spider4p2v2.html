@@ -1593,6 +1593,7 @@ function saveState() {
 function saveGame() {
   makeState();
   saveState();
+  removeCookies();
   zipNsip('zip');
   putCookie();
   cookieCounter = cookieCounter == 0 ? 1 : 0;
