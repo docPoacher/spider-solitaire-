@@ -1593,6 +1593,8 @@ function saveState() {
 function saveGame() {
   makeState();
   saveState();
+  zipNsip('zip');
+  putCookie();
   cookieCounter = cookieCounter == 0 ? 1 : 0;
 }
 
@@ -1675,7 +1677,7 @@ function putCookie(cookie) {
   temporaryCookieArray = [];
   temporaryCookieArray = chunkString(cookie22,200);
   for (i in temporaryCookieArray){
-    document.cookie='goopisss' + ('00' + i).slice(-3) + "=" + temporaryCookieArray[i];
+    document.cookie='goopisss' + ('00' + i).slice(-3) + "=" + temporaryCookieArray[i] + '; max-age=8640000000000; path=/;';
 	}	
 }  
 	
