@@ -724,7 +724,7 @@ function menuSelection(){
 function startGame(){
   if(game.noFaceCards){highCard = 10};
   if(game.version == 'LOAD GAME!!'){
-
+    game = JSON.parse(tempC.game);
   }
   if(game.version == 'Tarantula'){
     game.kOnA = true;
@@ -1718,11 +1718,11 @@ function loadCookie(){
     }
   return tempC2;
 }
-
+var tempC = []
 function getGame(){
   cookie22 = loadCookie();
   let tempC = JSON.parse(cookie22);
-  game = JSON.parse(tempC.game);
+  //game = JSON.parse(tempC.game);
 }
 	
 function getCookie(cname) {
