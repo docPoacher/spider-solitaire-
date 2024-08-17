@@ -1670,7 +1670,14 @@ function zipNsip(status){
     cookie22 = zipCard2(JSON.stringify(cookieDoc))
 	}
 }
-
+	
+function putCookie(cookie) {
+  temporaryCookieArray = [];
+  temporaryCookieArray = chunkString(cookie22,200);
+  for (i in temporaryCookieArray){
+    document.cookie='goopisss' + ('00' + i).slice(-3) + "=" + temporaryCookieArray[i];
+	}	
+}  
 	
 ////////////////  END ZIPPPER \\\\\\\\\\\\\\\\\\\\\\
 function loadState(cookie) {
@@ -1718,7 +1725,7 @@ function loadCookie(){
     }
   return tempC2;
 }
-var tempC = []
+var tempC = '';
 function getGame(){
   cookie22 = loadCookie();
   let tempC = JSON.parse(cookie22);
