@@ -780,12 +780,8 @@ function startGame(){
       game.decks = 4;
       game.suits = 2;
     }
-      
   }
-  
-   
-  
-	console.log(game);
+  	console.log(game);
  console.log('game on')
   newGame();
 }
@@ -812,6 +808,9 @@ function newGameDeal(){
     if(game.difficulty == 'hard'){deal(game.legs * 9, true)}
     if(game.difficulty == 'easy'){deal(game.legs * 4, true)}
     if(game.difficulty == 'medium'){deal(game.legs * 6,true)}
+  }
+  if(loadStatus == 1){
+    zipNsip('sip');
   }
 }
 
