@@ -1078,7 +1078,7 @@ function layoutGen(){
   if(drawDeck.length <= 0){document.getElementById('stock').innerHTML = '<button class="emptyStock">' + emptyCell + '</button>'}
   document.getElementById('stockNo').innerHTML = drawDeck.length;
   
-  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'}
+  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">^</span></button>'}
   if(cursorMode != "stack"){this ['found' + foundation.indexOf(emptyCell)] = emptyCell}
   
   foundRefresh();
@@ -1359,7 +1359,7 @@ function matchCol() {
   
     //console.log('match');
 
-  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'}
+  if(cursorMode == "stack"){this ['found' + foundation.indexOf(emptyCell)] = '<button height="14px" onclick="foundationPush()" class="invis"><span style="color:#B93E07;font-weight:bold;">^</span></button>'}
   if(cursorMode != "stack"){this ['found' + foundation.indexOf(emptyCell)] = emptyCell}
 	  
     saveGame();
@@ -1404,7 +1404,7 @@ function foundRefresh(){
 
 
 function foundButt(){
-  found[foundation.indexOf(emptyCell)] = '<button onClick="foundationPush" class="invis"><span style="color:#B93E07;font-weight:bold;">↑</span></button>'
+  found[foundation.indexOf(emptyCell)] = '<button onClick="foundationPush" class="invis"><span style="color:#B93E07;font-weight:bold;">^</span></button>'
   foundRefresh();
 }
 
