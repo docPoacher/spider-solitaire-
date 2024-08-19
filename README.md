@@ -15,7 +15,7 @@ To do:  <br>
 <br>
 feel free to share this link V V V V<br>
 <br>
-<STRONG>BETA COOKIE VERSION: Load closed or crashed game should work.  I have not extensivly tested it.  If you close the window, click LOAD GAME!! to load previous tableu.  Happy focusing!<br>
+<STRONG>BETA COOKIE VERSION: Load closed or crashed game should work.  NOTE: will load previous state, so if you do something and it does not work it will keep the previous state (same goes for if you get stuck, it will load the previous state).  I have not extensivly tested it.  If you close the window, click LOAD GAME!! to load previous tableu.  Happy focusing!<br>
 https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v3.html
 <br>
 <br>
