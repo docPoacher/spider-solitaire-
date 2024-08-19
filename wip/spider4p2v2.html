@@ -717,7 +717,10 @@ function menuSelection(){
  pipOption(i);
 		}
   }else if(game.version == 'LOAD GAME!!'){
-	  startGame();
+    console.log('loading previous game');
+    
+    startGame();
+	  
   }else{
   document.getElementById('banana').innerHTML = '<table width="80%"><tr><td>' + genForm('How hard?','difficulty',menuDifficultyArr,buttonSelection,'startGame()',3) + '</td></td></table><p id="boarnana"></p>';
   }
@@ -728,6 +731,7 @@ function startGame(){
   if(game.noFaceCards){highCard = 10};
   if(game.version == 'LOAD GAME!!'){
     game = JSON.parse(tempC.game);
+    game.version = 'LOAD GAME!!';
   }
   if(game.version == 'Tarantula'){
     game.kOnA = true;
@@ -810,6 +814,7 @@ function newGameDeal(){
     if(game.difficulty == 'medium'){deal(game.legs * 6,true)}
   }
   if(loadStatus == 1){
+    game = JSON.parse(tempC.game);
     zipNsip('sip');
     loadStatus = 0;
   }
