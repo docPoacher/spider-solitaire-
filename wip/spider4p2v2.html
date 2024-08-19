@@ -1615,10 +1615,12 @@ function unzipCard(str){
   return c;
 }
 
-var zipCardFox = [`{\\"suit\\":\\"<svg class=\\\\\\"circle\\\\\\" viewBox=\\\\\\"0 0 150 150\\\\\\" height=\\\\\\".6em\\\\\\" width=\\\\\\".6em\\\\\\" style=\\\\\\"align-items: center;\\\\\\"><use xlink:href=\\\\\\"`,`\\\\\\"/></svg>&nbsp;&nbsp;\\",\\"value\\":\\"`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":false}`,`"\\"&#8224\\""`]
-
+//var zipCardFox = [`{\\"suit\\":\\"<svg class=\\\\\\"circle\\\\\\" viewBox=\\\\\\"0 0 150 150\\\\\\" height=\\\\\\".6em\\\\\\" width=\\\\\\".6em\\\\\\" style=\\\\\\"align-items: center;\\\\\\"><use xlink:href=\\\\\\"`,`\\\\\\"/></svg>&nbsp;&nbsp;\\",\\"value\\":\\"`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":false}`,`"\\"&#8224\\""`,`'"<button height=\\"14px\\" onclick=\\"foundationPush()\\" class=\\"invis\\"><span style=\\"color:#B93E07;font-weight:bold;\\">^</span></button>"'`]
+var zipCardFox = [`{\\"suit\\":\\"<svg class=\\\\\\"circle\\\\\\" viewBox=\\\\\\"0 0 150 150\\\\\\" height=\\\\\\".6em\\\\\\" width=\\\\\\".6em\\\\\\" style=\\\\\\"align-items: center;\\\\\\"><use xlink:href=\\\\\\"`,`\\\\\\"/></svg>&nbsp;&nbsp;\\",\\"value\\":\\"`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":true}`,`\\",\\"vis\\":false}`,`"\\"&#8224\\""`,`ton height=\\\\\\"14px\\\\\\" onclick=\\\\\\"foundationPush()\\\\\\" class=\\\\\\"invis\\\\\\"><span style=\\\\\\"color:#B93E07;font-weight:bold;\\\\\\">^</span></but`]
+	
 function zipCard2(str){
-  let a = str.replaceAll(zipCardFox[0],``);
+  let z = str.replaceAll(zipCardFox[6],`#y`);	
+  let a = z.replaceAll(zipCardFox[0],``);
   let b = a;
   for(let i in zipCardSuit){
     b = b.replaceAll(zipCardSuit[i],(`#` + i))
@@ -1632,7 +1634,8 @@ function zipCard2(str){
 }
 
 function unzipCard2(str){
-  let a = str.replaceAll(`#t`,zipCardFox[3]);
+  let z = str.replaceAll(`#y`,zipCardFox[6]);	
+  let a = z.replaceAll(`#t`,zipCardFox[3]);
   let b = a.replaceAll(`#v`,zipCardFox[1]);
   let c = b;
   for(let i in zipCardSuit){
