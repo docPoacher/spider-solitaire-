@@ -5,16 +5,20 @@ but could it be more fun?<br>
 maybe even more game?<br>
 <br>
 To do:  <br>
-Save states (probably a cookie that allows one single save game per device that gets erased upon load)<br>
-Redo (one single step back per game for people who may have made an oopsie doopsie)<br>
-more fancy animations<br>
-better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once<br>
-modularity is pretty good but im still experimenting with different platforms and possibly an envelope for quicker android touch controls since android is very unique<br>
-i have to fix the bathroom still<br>
+- [X] game can load when you click load in version 4p2v3 and up (hopefully, don't count on it until i test it more lol)<br>
+- [] Save states (probably a cookie that allows one single save game per device that gets erased upon load)<br>
+- [X] Redo (one single step back per game for people who may have made an oopsie doopsie)<br>
+- [] more fancy animations<br>
+- [] better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once<br>
+- [] modularity is pretty good but im still experimenting with different platforms and possibly an envelope for quicker android touch controls since android is very unique<br>
+- [] i have to fix the bathroom still<br>
 <br>
 feel free to share this link V V V V<br>
 <br>
-<strong>CURRENT VERSION NOW WITH BACK BUTTON FOR CHEATERS (most asked for feature):</strong>https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v2.html
+<STRONG>BETA COOKIE VERSION: Load closed or crashed game should work.  I have not extensivly tested it.  If you close the window, click LOAD GAME!! to load previous tableu.  Happy focusing!<br>
+https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v3.html
+<br>
+<strong>STABLE NO LOADING PREVIOUS GAME.  Step backwards does work</strong>https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v2.html
 <br>
 (keyboard play not ready yet, I will remap all of the event listeners so some other commands might work. ((javascript does not possess the ability to kill ALL event listeners so I would have to enable and disable them individually)))
 <br>
