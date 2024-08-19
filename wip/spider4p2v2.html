@@ -731,7 +731,7 @@ function startGame(){
 	if(game.version == 'LOAD GAME!!'){
 		console.log('parsing game')
     game = JSON.parse(tempC.game);
-		game.version('Custom');
+		game.version = 'Custom';
 		console.log('game parsed');
   }
   if(game.noFaceCards){highCard = 10};
