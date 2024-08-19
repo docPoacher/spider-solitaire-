@@ -473,17 +473,8 @@ var gameVersions = {classic:true, nineLegs:false, spiderette:false,willowisp:fal
 var gameDifficulty = {easy:false,medium:true,hard:false};
 */
 var theUpdate=`<textarea id="updateTextarea">
-6/29/2023
-I made my own pips.  Plans for the future pips include rose and pink flower thing.  The blue thing is supposed to be a fish but it looks more like the barefoot wine logo.  I apologize for my shade thrown at one of the testers.  I did not realize that they did not use android phone.  I jumped to the conclusion because they mentioned they would need to use someone elses apple laptop to test the game and I wrongly assumed this meant they did have an apple phone.  That fact aside, they may have had a windows phone from 20 years ago or one of those new linux phones.  Also, it is possible that they had a grandpa flip phone or maybe no cell phone at all.  This brings up an interesting idea: maybe there are people out there still using magic jack to call people from a computer?  It is possible that they might consider their PC as their phone.
-After testing there will be the final release of version 1.0.  2.0 will have animations and 3.0 will have a Excel Spreadsheet interpretation.
-06/22/2023#2
-if you enter a game and attempt to start another game without refreshing your browser you will not be able to use the android keyboard or any keyboard for that matter to change the custom values.  for the time being the increase and decrease buttons are only available for PC users and some apple devices
-android is becoming increaseingly frustrating to work with
-for the time being all the pips have been replaced with alternatives.  I hope the game is still playable for all of the two of you.  also, some old code was in that was preventing entry of numbers into the android version of the custom menu, meaning the TWO OF YOU were either not trying the custom menu or were not sure what you should have been doing.
-Cloud pip looks too soft (too cloudy) so we'll use something else maybe
-06/22/2023
-work begins on making all of my own suit pips (heart, club, spade, and diamond ((the hardest one))) it seems "there is no way to control the rendering of emojis" and compatibility is zero for the appearance of the suits.  it shouldn't take long (it might take ages) but in the mean time I might default the pips to something else instead of the classic four since blue heart even comes up as a red heart for android.   Apparently, edge may do this as well, however, i have not tested edge as i do not have it installed.
-06/21/2023 Custom menu: wild card works. Randomize increases difficulty chance each click by design. (i.e. one click is easy random, two clicks is harder and so on) Suit number counter hidden to prevent game breaking also it was pointless(haha get it no pointer haha) now I will test it by playing a bazillion games.  New modes in development.\n06/20/2023 Custom menu: wildcard still broken.  Randomize breaks the game.  Suit number has to match highlighted pip or game will break.  \nEverything else works probably</textarea>` ;
+BETA COOKIE VERSION: Load closed or crashed game should work. NOTE: will load previous state, so if you do something and it does not work it will keep the previous state (same goes for if you get stuck, it will load the previous state). I have not extensivly tested it. If you close the window, click LOAD GAME!! to load previous tableu. Happy focusing!
+` ;
 var updates = '<table><tr><td>' + theUpdate + '</td></tr><tr><td><button class="customSubmitButton" onclick="mainMenu()">Exit to Menu</button></td></tr></table>';
 
 var loadStatus = 0;
