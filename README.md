@@ -31,6 +31,10 @@ https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/b
 For keyboard play: https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4point3.html
 <br>
 <br>
+08/something/2023
+<br>
+Cookies work, so now you can close browser or crash game and previous state will load.  I purposely have it load previous state because I feel this is a more desireable option.  The disadvantage is some people might be discomboulated by their previous state being loaded up.  If ENOUGH people complain I might change it but this way there will be less chance of a crash effecting the cookie and destroying the game state.  (E.G. if the browser has a stroke and encodes the cookie incorrectly and you try to load the state but it can not because the cookie is now corrupted)  I forgot to update the log so here it is like 2 weeks later I guess.  Am still researching local save cookie but not very seriously tbh.
+<br>
 07/31/2023
 <br>
 Hello all, I have finally disabled pull down refresh (works on android have not tested apple).  I had several close calls on my long vacation.  I have been testing every one of the options and so far everything appears to work well.  Will O' Wisp has become a new favorite.  Keeping the same version number since I did not debug any game feature only added code to the HTML style.
