@@ -8,10 +8,10 @@ To do:
 - [X] game can load when you click load in version 4p2v3 and up (hopefully, don't count on it until i test it more lol)  
 - [X] Save states (probably a cookie that allows one single save game per device that gets erased upon load)  
 - [X] Redo (one single step back per game for people who may have made an oopsie doopsie)  
-- [] more fancy animations  
-- [] better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once  
-- [] modularity is pretty good but im still experimenting with different platforms and possibly an envelope for quicker android touch controls since android is very unique  
-- [] i have to fix the bathroom still  
+- [ ] more fancy animations  
+- [ ] better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once  
+- [ ] modularity is pretty good but im still experimenting with different platforms and possibly an envelope for quicker android touch controls since android is very unique  
+- [ ] i have to fix the bathroom still  
   
 feel free to share this link V V V V  
   
