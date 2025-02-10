@@ -20,6 +20,22 @@ feel free to share this link V V V V
 https://docpoacher.github.io/website/spider_solitaire.html  
 ### Click above!  
   
+A Brief History of Milestones:  
+April 8th, 2023: Classic made in a day. Alpha version.  
+April 10th, 2023: Tarantula added.  Beta version.  
+April 14th, 2023: Fixes.  
+June 7th, 2023: Rewrote from scratch.  Version 2.  
+June 21st, 2023: Custom working.  
+June 29th, 2023: Custom Pips added.  
+July 31st, 2023: No refresh on pulldown.  Not really a big deal...  
+Dec 8th, 2023: First attempt at cookie.  
+July 5th, 2024: Added "Last State" cheat.  
+August 19th, 2024: Cookies almost working.
+August 30th, 2024: Cookies mostly working. Not on big games. Fails to load cookie after maybe 200 cards... have not fully tested it.  
+September 11, 2024: Last release pending catasrophe.  Began work on Xspider which will be next itineration.  
+February 10th, 2025: Microsoft defender and Edge no longer loads htmlpreview correctly. Moved to github pages website. Edge seems to be unable to load cookies.  
+
+
 **BETA COOKIE VERSION: Load closed or crashed game should work.  NOTE: will load previous state, so if you do something and it does not work it will keep the previous state (same goes for if you get stuck, it will load the previous state).  I have not extensivly tested it.  If you close the window, click LOAD GAME!! to load previous tableu.  Happy focusing!  **  
 *This link might trip your Microsoft defender.  Please use above link*  
 https://htmlpreview.github.io/?https://github.com/docPoacher/spider-solitaire-/blob/main/spider4p2v3.html  
