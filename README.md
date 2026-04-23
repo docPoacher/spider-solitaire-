@@ -19,7 +19,7 @@ feel free to share this link V V V V
   
 # SPIDER SOLITAIRE  
 ## Click below!  
-https://docpoacher.github.io/website/spider_solitaire.html  
+https://docpoacher.github.io/spider_solitaire.html  
 ### Click above!  
   
 A Brief History of Milestones:  
