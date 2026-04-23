@@ -9,9 +9,9 @@ To do:
 - [X] Save states (probably a cookie that allows one single save game per device that gets erased upon load)  
 - [X] Redo (one single step back per game for people who may have made an oopsie doopsie)  
 - [ ] Opera doesn't display the face and 10 cards correctly.
-- [ ] Cookies are broken again and I didn't do anything
+- [X] Cookies are broken again and I didn't do anything (fixed)
 - [ ] more fancy animations  
-- [ ] better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once  
+- [ ] better keyboard controls which are kinda broken and also there's no way to turn off event listener for all at once  (people don't use them, if one person asks I might impliment)
 - [ ] modularity is pretty good but im still experimenting with different platforms and possibly an envelope for quicker android touch controls since android is very unique  
 - [ ] i have to fix the bathroom still  
   
@@ -36,7 +36,10 @@ A Brief History of Milestones:
 -August 30th, 2024: Cookies mostly working. Not on big games. Fails to load cookie after maybe 200 cards... have not fully tested it.  
 -September 11, 2024: Last release pending catasrophe.  Began work on Xspider which will be next itineration.  
 -February 10th, 2025: Microsoft defender and Edge no longer loads htmlpreview correctly. Moved to github pages website. Edge seems to be unable to load cookies.  
+-April 23rd, 2026: Changed cookie to localStorage.  After SOME testing it seems to work.  
 
+
+**POSSIBLE STABLE LOCALSTORAGE VERSION:** Works better than cookie version.  Changed load previous function as well.  Yes, I used AI to help me figure out the problem.  I guess AI is smart enough NOW to figure out localStorage and cookies because it sure wasn't a year ago.
 
 **BETA COOKIE VERSION: Load closed or crashed game should work.  NOTE: will load previous state, so if you do something and it does not work it will keep the previous state (same goes for if you get stuck, it will load the previous state).  I have not extensivly tested it.  If you close the window, click LOAD GAME!! to load previous tableu.  Happy focusing!**  
 *This link might trip your Microsoft defender.  Please use above link*  
